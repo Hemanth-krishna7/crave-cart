@@ -1,11 +1,11 @@
 import PageWrapper from '@/components/common/PageWrapper';
 import HeroSection from '@/components/home/HeroSection';
 import CategoryCard from '@/components/home/CategoryCard';
-import RestaurantCard from '@/components/home/RestaurantCard';
+import RestaurantCard from '@/components/common/RestaurantCard';
 import FeatureCard from '@/components/home/FeatureCard';
 import CTASection from '@/components/home/CTASection';
 import { CATEGORIES } from '@/data/categories';
-import { FEATURED_RESTAURANTS } from '@/data/featuredRestaurants';
+import { RESTAURANTS } from '@/data/restaurants';
 
 export default function Home() {
   const features = [
@@ -92,7 +92,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {FEATURED_RESTAURANTS.map((restaurant) => (
+          {RESTAURANTS.filter((res) => res.featured).map((restaurant) => (
             <RestaurantCard key={restaurant.id} restaurant={restaurant} />
           ))}
         </div>

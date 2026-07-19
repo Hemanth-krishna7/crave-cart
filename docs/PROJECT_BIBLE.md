@@ -91,6 +91,7 @@ Located in `client/src/components/common/`:
 * **`PageWrapper`**: Automatically manages standard HTML document titles on component mount/update and frames contents inside the `Container` shell.
 * **`LoadingPlaceholder`**: Renders standard loader spinners with optional wait copy. Supports standard block layout and `fullPage` flex-centered modes.
 * **`EmptyState`**: An error/zero-data component with adjustable icon, title, description, and primary CTA buttons (React Router links or callback functions).
+* **`RestaurantCard`**: Displays individual restaurant listings, including ratings, delivery times, cuisines, and price categories. Supports status states (displays "Closed" overlay, reduces opacity to 70%, and disables hover effects on closed entries).
 
 ### 5.2 Application Constants
 Located in `client/src/constants/`:
@@ -111,15 +112,17 @@ Located in `client/src/data/`:
     * `id`: `string` (Unique category key)
     * `name`: `string` (Display name)
     * `image`: `string` (Food visual placeholder URL)
-* **`FEATURED_RESTAURANTS`** (`featuredRestaurants.js`): Lists featured landing-page restaurants.
+* **`RESTAURANTS`** (`restaurants.js`): Central static dataset mapping all restaurants in the application.
   * Schema:
-    * `id`: `string` (Unique identifier)
-    * `name`: `string` (Restaurant name)
+    * `id`: `string` (Unique restaurant key)
+    * `name`: `string` (Display name)
     * `image`: `string` (Cover image URL)
-    * `cuisine`: `string[]` (List of food categories/cuisines)
+    * `cuisine`: `string[]` (List of cuisines)
     * `rating`: `number` (Average customer star rating)
     * `deliveryTime`: `string` (Estimated delivery window text)
-    * `priceCategory`: `string` (Rate scale description: `$` / `$$` / `$$$`)
+    * `priceCategory`: `string` (Rate scale: `$` / `$$` / `$$$`)
+    * `availabilityStatus`: `string` (`'open'` | `'closed'`)
+    * `featured`: `boolean` (Flag determining placement on the Home page featured grid)
 
 ---
 
@@ -128,4 +131,3 @@ Located in `client/src/data/`:
 * **State Management:** Keep it modular. Store files go inside `client/src/store/`.
 * **API Calls:** Wrap fetch logic inside `client/src/services/` rather than spreading requests in pages.
 * **Themes:** Utilize Tailwind CSS v4 `@theme` configuration directives inside `client/src/styles/global.css` if Custom Styling is needed.
-

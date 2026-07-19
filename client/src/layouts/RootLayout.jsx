@@ -3,13 +3,17 @@ import { Outlet, Link, NavLink } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { THEME } from '@/constants/theme';
 import { APP_CONFIG } from '@/constants/app';
+import { useCartStore, selectTotalItems } from '@/store/cartStore';
 
 export default function RootLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const totalItems = useCartStore(selectTotalItems);
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
     { label: 'Restaurants', path: ROUTES.RESTAURANTS },
+    { label: 'Orders', path: ROUTES.ORDERS },
+    { label: 'Favorites', path: ROUTES.FAVORITES },
   ];
 
   return (
@@ -51,7 +55,7 @@ export default function RootLayout() {
               {/* Cart Button Placeholder */}
               <Link
                 to={ROUTES.CART}
-                className="relative p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-colors"
+                className="relative p-2 text-slate-600 hover:text-orange-600 hover:bg-slate-50 rounded-lg transition-colors"
                 aria-label="View Cart"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,15 +66,17 @@ export default function RootLayout() {
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
-                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/3 -translate-y-1/3 bg-indigo-600 rounded-full">
-                  0
-                </span>
+                {totalItems > 0 && (
+                  <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/3 -translate-y-1/3 bg-orange-600 rounded-full">
+                    {totalItems}
+                  </span>
+                )}
               </Link>
 
               {/* User Profile Link Placeholder */}
               <Link
                 to={ROUTES.PROFILE}
-                className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-semibold text-sm border border-indigo-200 hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-700 font-semibold text-sm border border-orange-200 hover:opacity-90 transition-opacity"
                 aria-label="User Profile"
               >
                 U
@@ -82,7 +88,7 @@ export default function RootLayout() {
               {/* Mobile Cart Shortcut */}
               <Link
                 to={ROUTES.CART}
-                className="relative p-2 mr-2 text-slate-600 hover:text-indigo-600 rounded-lg"
+                className="relative p-2 mr-2 text-slate-600 hover:text-orange-600 rounded-lg"
                 aria-label="View Cart"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,9 +99,11 @@ export default function RootLayout() {
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
-                <span className="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-indigo-600 rounded-full">
-                  0
-                </span>
+                {totalItems > 0 && (
+                  <span className="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-orange-600 rounded-full">
+                    {totalItems}
+                  </span>
+                )}
               </Link>
 
               <button
@@ -201,13 +209,13 @@ export default function RootLayout() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.CART} className="hover:text-white transition-colors">
-                    My Cart
+                  <Link to={ROUTES.ABOUT} className="hover:text-white transition-colors">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.PROFILE} className="hover:text-white transition-colors">
-                    My Account
+                  <Link to={ROUTES.CONTACT} className="hover:text-white transition-colors">
+                    Contact Us
                   </Link>
                 </li>
               </ul>
@@ -220,24 +228,24 @@ export default function RootLayout() {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#help" className="hover:text-white transition-colors">
-                    Help & Support
-                  </a>
+                  <Link to={ROUTES.CART} className="hover:text-white transition-colors">
+                    My Cart
+                  </Link>
                 </li>
                 <li>
-                  <a href="#terms" className="hover:text-white transition-colors">
+                  <Link to={ROUTES.PROFILE} className="hover:text-white transition-colors">
+                    My Account
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.TERMS} className="hover:text-white transition-colors">
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#privacy" className="hover:text-white transition-colors">
+                  <Link to={ROUTES.PRIVACY} className="hover:text-white transition-colors">
                     Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#cookies" className="hover:text-white transition-colors">
-                    Cookie Settings
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
