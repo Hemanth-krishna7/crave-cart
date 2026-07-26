@@ -3,11 +3,11 @@ import { Outlet, Link, NavLink } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { THEME } from '@/constants/theme';
 import { APP_CONFIG } from '@/constants/app';
-import { useCartStore, selectTotalItems } from '@/store/cartStore';
+import { useCartStore, selectRestaurantGroupCount } from '@/store/cartStore';
 
 export default function RootLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const totalItems = useCartStore(selectTotalItems);
+  const restaurantGroupCount = useCartStore(selectRestaurantGroupCount);
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -66,9 +66,9 @@ export default function RootLayout() {
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
-                {totalItems > 0 && (
+                {restaurantGroupCount > 0 && (
                   <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/3 -translate-y-1/3 bg-orange-600 rounded-full">
-                    {totalItems}
+                    {restaurantGroupCount}
                   </span>
                 )}
               </Link>
@@ -99,9 +99,9 @@ export default function RootLayout() {
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
-                {totalItems > 0 && (
+                {restaurantGroupCount > 0 && (
                   <span className="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-orange-600 rounded-full">
-                    {totalItems}
+                    {restaurantGroupCount}
                   </span>
                 )}
               </Link>

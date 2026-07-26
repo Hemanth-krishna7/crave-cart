@@ -55,6 +55,11 @@ export const useCartStore = create(
         }),
 
       clearCart: () => set({ cartItems: [] }),
+
+      removeRestaurantItems: (restaurantId) =>
+        set((state) => ({
+          cartItems: state.cartItems.filter((item) => item.restaurantId !== restaurantId),
+        })),
     }),
     {
       name: 'cravecart-cart', // unique name inside localStorage
@@ -68,3 +73,8 @@ export const selectTotalItems = (state) =>
 
 export const selectSubtotal = (state) =>
   state.cartItems.reduce((sum, item) => sum + item.quantity * item.price, 0);
+
+export const selectRestaurantGroupCount = (state) => {
+  const uniqueRestaurants = new Set(state.cartItems.map((item) => item.restaurantId));
+  return uniqueRestaurants.size;
+};

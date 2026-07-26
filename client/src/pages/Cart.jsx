@@ -28,7 +28,11 @@ export default function Cart() {
               Shopping Cart
             </h1>
             <p className="text-sm text-slate-500 mt-1">
-              You have {totalItems} {totalItems === 1 ? 'item' : 'items'} in your cart.
+              You have {totalItems} {totalItems === 1 ? 'item' : 'items'} across{' '}
+              <span className="font-semibold text-slate-800">
+                {groupedRestaurants.length} {groupedRestaurants.length === 1 ? 'restaurant' : 'restaurants'}
+              </span>{' '}
+              in your cart.
             </p>
           </div>
 
@@ -42,6 +46,7 @@ export default function Cart() {
                     key={group.restaurantId}
                     restaurantId={group.restaurantId}
                     restaurantName={restaurantName}
+                    deliveryTime={group.restaurant?.deliveryTime}
                     items={group.items}
                     onIncrease={increaseQuantity}
                     onDecrease={decreaseQuantity}

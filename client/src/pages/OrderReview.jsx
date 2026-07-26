@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import PageWrapper from '@/components/common/PageWrapper';
 import CheckoutRestaurantSection from '@/components/checkout/CheckoutRestaurantSection';
@@ -7,9 +8,11 @@ import InstructionsReviewCard from '@/components/review/InstructionsReviewCard';
 import PaymentReviewCard from '@/components/review/PaymentReviewCard';
 import { useCartStore } from '@/store/cartStore';
 import { groupCartItemsByRestaurant } from '@/utils/cartHelpers';
-import { generateOrderReference } from '@/utils/orderReference';
+import { placeOrder } from '@/services/orderService';
 import { APP_CONFIG } from '@/constants/app';
 import { ROUTES } from '@/constants/routes';
+import { getRestaurantAvailabilityById } from '@/services/availabilityService';
+import { AVAILABILITY_STATUS } from '@/constants/restaurantAvailability';
 
 export default function OrderReview() {
   const navigate = useNavigate();
@@ -17,28 +20,43 @@ export default function OrderReview() {
   const cartItems = useCartStore((state) => state.cartItems);
 
   const state = location.state;
+  const restaurantId = state?.restaurantId;
+
+  // Snapshot cart items on mount to prevent reactive re-renders/redirects during store updates
+  const [initialItems] = useState(() => {
+    return restaurantId
+      ? cartItems.filter((item) => item.restaurantId === restaurantId)
+      : cartItems;
+  });
+
   if (!state || !state.formData) {
     return <Navigate to={ROUTES.CHECKOUT} replace />;
   }
 
-  const { formData, restaurantId } = state;
+  const { formData } = state;
 
-  // Filter items matching the checkout mode (single vs all)
-  const items = restaurantId
-    ? cartItems.filter((item) => item.restaurantId === restaurantId)
-    : cartItems;
-
-  if (items.length === 0) {
+  if (initialItems.length === 0) {
     return <Navigate to={ROUTES.CHECKOUT} replace />;
   }
 
   // Calculate pricing
-  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const subtotal = initialItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const deliveryFee = APP_CONFIG.DELIVERY_FEE;
   const grandTotal = subtotal + deliveryFee;
 
+  // Enforce availability validation checks
+  const uniqueRestaurantIds = [...new Set(initialItems.map((item) => item.restaurantId))];
+  const closedRestaurantAvail = uniqueRestaurantIds
+    .map((id) => getRestaurantAvailabilityById(id))
+    .find((avail) => !avail.canOrder);
+  const canPlace = !closedRestaurantAvail;
+
+  const isScheduled = uniqueRestaurantIds.some(
+    (id) => getRestaurantAvailabilityById(id).status === AVAILABILITY_STATUS.SCHEDULED
+  );
+
   // Group items using the shared utility helper
-  const groupedRestaurants = groupCartItemsByRestaurant(items);
+  const groupedRestaurants = groupCartItemsByRestaurant(initialItems);
 
   const activeModeText = restaurantId
     ? (groupedRestaurants[0]?.restaurant?.name || 'Restaurant')
@@ -53,14 +71,25 @@ export default function OrderReview() {
   };
 
   const handlePlaceOrder = () => {
-    const orderId = generateOrderReference();
-    navigate(ROUTES.SUCCESS, {
-      state: {
-        orderId,
-        deliveryInfo: formData,
-        paymentMethod: formData.paymentMethod,
-      },
-    });
+    try {
+      const order = placeOrder({
+        cartItems,
+        formData,
+        restaurantId,
+        pricing: {
+          subtotal,
+          deliveryFee,
+          total: grandTotal,
+        },
+      });
+      navigate(ROUTES.SUCCESS, {
+        state: {
+          orderId: order.id,
+        },
+      });
+    } catch (err) {
+      alert(err.message || 'An error occurred while placing your order.');
+    }
   };
 
   return (
@@ -102,18 +131,48 @@ export default function OrderReview() {
           </div>
 
           {/* Right Summary column */}
-          <div className="lg:sticky lg:top-24">
+          <div className="lg:sticky lg:top-24 space-y-4">
             <CheckoutSummary
               subtotal={subtotal}
               deliveryFee={deliveryFee}
               grandTotal={grandTotal}
             >
-              <button
-                onClick={handlePlaceOrder}
-                className="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 cursor-pointer"
-              >
-                Place Order
-              </button>
+              <div className="space-y-4">
+                {/* Contextual Availability Warning */}
+                {!canPlace && (
+                  <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 text-xs text-rose-800 space-y-1">
+                    <p className="font-bold flex items-center gap-1.5">
+                      <span>⚠️</span> Ordering Currently Closed
+                    </p>
+                    <p className="leading-relaxed">
+                      One or more restaurants in your order are currently closed. Ordering will become available once the restaurants reopen.
+                    </p>
+                  </div>
+                )}
+
+                {isScheduled && canPlace && (
+                  <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 text-xs text-amber-800 space-y-1">
+                    <p className="font-bold flex items-center gap-1.5">
+                      <span>📅</span> Pre-orders Only
+                    </p>
+                    <p className="leading-relaxed">
+                      This restaurant is accepting pre-orders for scheduled deliveries. (Scheduled delivery coming soon)
+                    </p>
+                  </div>
+                )}
+
+                <button
+                  onClick={handlePlaceOrder}
+                  disabled={!canPlace}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${
+                    canPlace
+                      ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer'
+                      : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                  }`}
+                >
+                  Place Order
+                </button>
+              </div>
             </CheckoutSummary>
           </div>
         </div>

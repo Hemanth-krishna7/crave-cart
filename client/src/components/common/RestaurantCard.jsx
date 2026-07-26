@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { RESTAURANT_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
+import { getRestaurantAvailability } from '@/services/availabilityService';
 
 export default function RestaurantCard({ restaurant }) {
-  const isClosed = restaurant.availabilityStatus === 'closed';
+  const isClosed = !getRestaurantAvailability(restaurant).canOrder;
   const detailUrl = ROUTES.RESTAURANT_DETAIL.replace(':id', restaurant.id);
 
   const cardClasses = `block bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col h-full transition duration-200 ${

@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { useForm, FormProvider, useFormContext } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import PageWrapper from '@/components/common/PageWrapper';
@@ -14,6 +14,7 @@ import { RESTAURANTS } from '@/data/restaurants';
 import { APP_CONFIG } from '@/constants/app';
 import { checkoutSchema } from '@/validations/checkoutSchema';
 import { ROUTES } from '@/constants/routes';
+import { canPlaceOrder } from '@/services/availabilityService';
 
 function ReviewOrderButton() {
   const {
@@ -128,6 +129,38 @@ export default function Checkout() {
 
   const deliveryFee = APP_CONFIG.DELIVERY_FEE;
   const grandTotal = subtotal + deliveryFee;
+
+  // Enforce availability validation on checkout entry
+  const closedGroup = checkoutGroups.find((group) => !canPlaceOrder(group.restaurantId));
+
+  if (closedGroup) {
+    return (
+      <PageWrapper title="Ordering Unavailable" className="pb-16" containerClassName="max-w-xl">
+        <div className="text-center py-16 space-y-6">
+          <div className="w-20 h-20 mx-auto rounded-full bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-500 shadow-sm text-3xl">
+            🔒
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold text-slate-800 font-heading">
+              Ordering Unavailable
+            </h2>
+            <p className="text-sm text-slate-500 leading-relaxed max-w-sm mx-auto">
+              <span className="font-semibold text-slate-800">&ldquo;{closedGroup.restaurantName}&rdquo;</span> is currently closed and not accepting orders.
+            </p>
+            <p className="text-xs text-slate-400">
+              Ordering will become available once the restaurant reopens.
+            </p>
+          </div>
+          <Link
+            to={ROUTES.RESTAURANTS}
+            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+          >
+            Browse Restaurants
+          </Link>
+        </div>
+      </PageWrapper>
+    );
+  }
 
   return (
     <PageWrapper title="Checkout" className="pb-16" containerClassName="max-w-7xl">

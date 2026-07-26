@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { RESTAURANT_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
+import { getRestaurantAvailability } from '@/services/availabilityService';
+import RestaurantAvailabilityBadge from '@/components/restaurants/RestaurantAvailabilityBadge';
 
 export default function RestaurantHeader({ restaurant }) {
-  const isClosed = restaurant.availabilityStatus === 'closed';
+  const isClosed = !getRestaurantAvailability(restaurant).canOrder;
 
   return (
     <div className="relative bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
@@ -46,16 +48,8 @@ export default function RestaurantHeader({ restaurant }) {
               <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
                 {restaurant.name}
               </h1>
-              {/* Availability Badge */}
-              <span
-                className={`px-2.5 py-0.5 rounded-full text-xs font-bold border uppercase tracking-wider ${
-                  isClosed
-                    ? 'bg-rose-50 text-rose-700 border-rose-200'
-                    : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                }`}
-              >
-                {restaurant.availabilityStatus}
-              </span>
+              {/* Centralized Availability Badge */}
+              <RestaurantAvailabilityBadge restaurant={restaurant} />
             </div>
             <p className="text-sm text-slate-500 font-medium">
               {restaurant.cuisine.join(' • ')}
