@@ -1,6 +1,15 @@
+import { Link } from 'react-router-dom';
+import { getCategoryDiscoveryUrl } from '@/utils/categoryNormalization';
+
 export default function CategoryCard({ category }) {
+  const discoveryUrl = getCategoryDiscoveryUrl(category);
+
   return (
-    <div className="flex flex-col items-center group cursor-pointer">
+    <Link
+      to={discoveryUrl}
+      className="flex flex-col items-center group cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-2xl p-1"
+      aria-label={`Browse ${category.name} restaurants`}
+    >
       <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-transparent group-hover:border-indigo-600 transition-colors duration-200 shadow-sm">
         <img
           src={category.image}
@@ -12,6 +21,6 @@ export default function CategoryCard({ category }) {
       <span className="mt-3 text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors duration-200">
         {category.name}
       </span>
-    </div>
+    </Link>
   );
 }

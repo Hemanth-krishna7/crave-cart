@@ -38,8 +38,8 @@ export default function Home() {
       ),
     },
     {
-      title: 'Real-time Tracking',
-      description: 'Monitor your order status live from kitchen preparation to your front doorstep.',
+      title: 'Interactive Order Tracking',
+      description: 'Track the simulated status of your order live from kitchen preparation through mock delivery.',
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path

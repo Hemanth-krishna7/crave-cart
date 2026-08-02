@@ -7,7 +7,6 @@ export const ROUTES = {
   CHECKOUT_RESTAURANT: '/checkout/restaurant/:restaurantId',
   CHECKOUT_REVIEW: '/checkout/review',
   SUCCESS: '/success',
-  PROFILE: '/profile',
   ORDERS: '/orders',
   FAVORITES: '/favorites',
   ABOUT: '/about',

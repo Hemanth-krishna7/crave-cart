@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 
 const INITIAL_STATE = {
+  discoveryMode: 'restaurants', // 'restaurants' | 'dishes'
   searchQuery: '',
   selectedCuisine: 'All',
   selectedAvailability: 'all',
@@ -11,6 +12,7 @@ const INITIAL_STATE = {
 export const useDiscoveryStore = create((set) => ({
   ...INITIAL_STATE,
 
+  setDiscoveryMode: (discoveryMode) => set({ discoveryMode }),
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setSelectedCuisine: (selectedCuisine) => set({ selectedCuisine }),
   setSelectedAvailability: (selectedAvailability) => set({ selectedAvailability }),
@@ -39,6 +41,7 @@ export const useDiscoveryStore = create((set) => ({
 
 // Selectors
 export const selectDiscoveryState = (state) => ({
+  discoveryMode: state.discoveryMode,
   searchQuery: state.searchQuery,
   selectedCuisine: state.selectedCuisine,
   selectedAvailability: state.selectedAvailability,

@@ -1,24 +1,44 @@
-import ComingSoonPlaceholder from '@/components/common/ComingSoonPlaceholder';
-
-function ShieldIcon(props) {
-  return (
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.5}
-        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-      />
-    </svg>
-  );
-}
+import React from 'react';
 
 export default function Privacy() {
   return (
-    <ComingSoonPlaceholder
-      title="Privacy Policy"
-      description="Read how CraveCart handles, stores, and protects your personal and transaction data with modern encryption."
-      icon={ShieldIcon}
-    />
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8">
+      <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+        Privacy Policy
+      </h1>
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-6 text-sm text-slate-600 leading-relaxed shadow-xs">
+        <p>
+          At CraveCart, we build demonstration web applications to showcase frontend UI and architecture. This Privacy Policy details how we handle information in this demo.
+        </p>
+
+        <section className="space-y-2">
+          <h2 className="text-base font-bold text-slate-800">1. Data Storage & Local Simulation</h2>
+          <p>
+            CraveCart does not run external database servers or track user identities in the cloud. All simulated data (such as favorites, cart status, and order history) is stored directly within your local browser storage using LocalStorage. Removing your browser cookies or clearing site data will reset the application state.
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-base font-bold text-slate-800">2. Analytics & Cookies</h2>
+          <p>
+            This demo does not place tracking pixels, third-party cookies, or perform cross-site analytics. We respect your browser privacy configurations.
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-base font-bold text-slate-800">3. Contact Inquiries</h2>
+          <p>
+            When you complete the contact form on this site, the submission data is stored in the application&apos;s React state and is never uploaded to any server. Refreshing or leaving the page clears this temporary submission data.
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-base font-bold text-slate-800">4. Policy Updates</h2>
+          <p>
+            As this is a portfolio showcase, this document will be updated only to reflect changes in simulated functionality.
+          </p>
+        </section>
+      </div>
+    </div>
   );
 }

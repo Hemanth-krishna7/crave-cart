@@ -3,6 +3,7 @@ import { ROUTES } from '@/constants/routes';
 import { RESTAURANT_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
 import { getRestaurantAvailability } from '@/services/availabilityService';
 import RestaurantAvailabilityBadge from '@/components/restaurants/RestaurantAvailabilityBadge';
+import FavoriteButton from '@/components/common/FavoriteButton';
 
 export default function RestaurantHeader({ restaurant }) {
   const isClosed = !getRestaurantAvailability(restaurant).canOrder;
@@ -38,6 +39,14 @@ export default function RestaurantHeader({ restaurant }) {
           </svg>
           Back
         </Link>
+
+        {/* Favorite Button Floating on top-right of banner */}
+        <FavoriteButton
+          id={restaurant.id}
+          type="restaurant"
+          name={restaurant.name}
+          className="absolute top-4 right-4 shadow-md bg-white/95 border border-slate-200"
+        />
       </div>
 
       {/* Details Container */}

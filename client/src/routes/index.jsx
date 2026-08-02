@@ -4,7 +4,6 @@ import Home from '@/pages/Home';
 import Restaurants from '@/pages/Restaurants';
 import RestaurantDetails from '@/pages/RestaurantDetails';
 import Cart from '@/pages/Cart';
-import Profile from '@/pages/Profile';
 import Orders from '@/pages/Orders';
 import Favorites from '@/pages/Favorites';
 import About from '@/pages/About';
@@ -25,7 +24,6 @@ export default function AppRoutes() {
         <Route path={ROUTES.RESTAURANTS} element={<Restaurants />} />
         <Route path={ROUTES.RESTAURANT_DETAIL} element={<RestaurantDetails />} />
         <Route path={ROUTES.CART} element={<Cart />} />
-        <Route path={ROUTES.PROFILE} element={<Profile />} />
         <Route path={ROUTES.ORDERS} element={<Orders />} />
         <Route path={ROUTES.FAVORITES} element={<Favorites />} />
         <Route path={ROUTES.ABOUT} element={<About />} />

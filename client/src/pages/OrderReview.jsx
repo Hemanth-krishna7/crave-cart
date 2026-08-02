@@ -12,7 +12,6 @@ import { placeOrder } from '@/services/orderService';
 import { APP_CONFIG } from '@/constants/app';
 import { ROUTES } from '@/constants/routes';
 import { getRestaurantAvailabilityById } from '@/services/availabilityService';
-import { AVAILABILITY_STATUS } from '@/constants/restaurantAvailability';
 
 export default function OrderReview() {
   const navigate = useNavigate();
@@ -50,10 +49,6 @@ export default function OrderReview() {
     .map((id) => getRestaurantAvailabilityById(id))
     .find((avail) => !avail.canOrder);
   const canPlace = !closedRestaurantAvail;
-
-  const isScheduled = uniqueRestaurantIds.some(
-    (id) => getRestaurantAvailabilityById(id).status === AVAILABILITY_STATUS.SCHEDULED
-  );
 
   // Group items using the shared utility helper
   const groupedRestaurants = groupCartItemsByRestaurant(initialItems);
@@ -146,17 +141,6 @@ export default function OrderReview() {
                     </p>
                     <p className="leading-relaxed">
                       One or more restaurants in your order are currently closed. Ordering will become available once the restaurants reopen.
-                    </p>
-                  </div>
-                )}
-
-                {isScheduled && canPlace && (
-                  <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 text-xs text-amber-800 space-y-1">
-                    <p className="font-bold flex items-center gap-1.5">
-                      <span>📅</span> Pre-orders Only
-                    </p>
-                    <p className="leading-relaxed">
-                      This restaurant is accepting pre-orders for scheduled deliveries. (Scheduled delivery coming soon)
                     </p>
                   </div>
                 )}

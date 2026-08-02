@@ -1,14 +1,24 @@
 import { useParams } from 'react-router-dom';
 import { formatCurrency } from '@/utils';
 import { FOOD_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
-import { useCartStore } from '@/store/cartStore';
+import { useCartStore, selectItemQuantity } from '@/store/cartStore';
+import QuantitySelector from '@/components/common/QuantitySelector';
+import FavoriteButton from '@/components/common/FavoriteButton';
+import { canPlaceOrder } from '@/services/availabilityService';
 
 export default function FoodCard({ item }) {
   const { name, description, price, isVeg, isPopular, rating, image } = item;
   const { id: routeRestaurantId } = useParams();
+
   const addItem = useCartStore((state) => state.addItem);
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
+
+  const quantity = useCartStore(selectItemQuantity(item.id));
+  const isClosed = !canPlaceOrder(item.restaurantId || routeRestaurantId);
 
   const handleAddToCart = () => {
+    if (isClosed) return;
     addItem({
       id: item.id,
       restaurantId: item.restaurantId || routeRestaurantId,
@@ -19,7 +29,7 @@ export default function FoodCard({ item }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex gap-4 sm:gap-6 shadow-sm hover:shadow-md hover:border-slate-300 transition duration-200">
+    <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex gap-4 sm:gap-6 shadow-xs hover:shadow-md hover:border-slate-300 transition duration-200">
       {/* 1:1 Food Image */}
       <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden bg-slate-100 shrink-0">
         <img
@@ -30,6 +40,12 @@ export default function FoodCard({ item }) {
             e.target.onError = null;
             e.target.src = FOOD_FALLBACK_IMAGE;
           }}
+        />
+        <FavoriteButton
+          id={item.id}
+          type="dish"
+          name={name}
+          className="absolute top-1.5 left-1.5 p-1 w-7.5 h-7.5"
         />
       </div>
 
@@ -73,17 +89,24 @@ export default function FoodCard({ item }) {
           <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{description}</p>
         </div>
 
-        {/* Price & Add Action */}
+        {/* Price & Quantity Selector */}
         <div className="flex items-center justify-between pt-1">
           <span className="text-sm sm:text-base font-extrabold text-slate-900 font-mono">
             {formatCurrency(price)}
           </span>
-          <button
-            onClick={handleAddToCart}
-            className="px-4 py-1.5 text-xs font-bold rounded-lg border border-orange-200 text-orange-600 hover:bg-orange-50 hover:border-orange-300 transition-colors shadow-sm focus:outline-none"
-          >
-            Add
-          </button>
+          {isClosed ? (
+            <span className="text-xs font-bold text-rose-600 bg-rose-50 border border-rose-100 px-3 py-1.5 rounded-xl uppercase tracking-wider select-none">
+              Unavailable
+            </span>
+          ) : (
+            <QuantitySelector
+              quantity={quantity}
+              itemName={name}
+              onAdd={handleAddToCart}
+              onIncrease={() => increaseQuantity(item.id)}
+              onDecrease={() => decreaseQuantity(item.id)}
+            />
+          )}
         </div>
       </div>
     </div>

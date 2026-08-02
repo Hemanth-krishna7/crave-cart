@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { RESTAURANT_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
 import { getRestaurantAvailability } from '@/services/availabilityService';
+import FavoriteButton from '@/components/common/FavoriteButton';
 
 export default function RestaurantCard({ restaurant }) {
   const isClosed = !getRestaurantAvailability(restaurant).canOrder;
@@ -25,6 +26,14 @@ export default function RestaurantCard({ restaurant }) {
             e.target.onError = null;
             e.target.src = RESTAURANT_FALLBACK_IMAGE;
           }}
+        />
+
+        {/* Favorite Button */}
+        <FavoriteButton
+          id={restaurant.id}
+          type="restaurant"
+          name={restaurant.name}
+          className="absolute top-3 left-3 shadow-md"
         />
 
         {/* Closed Overlay */}

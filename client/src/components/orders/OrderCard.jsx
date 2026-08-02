@@ -2,7 +2,7 @@ import { useState } from 'react';
 import OrderStatusBadge from './OrderStatusBadge';
 import { formatCurrency } from '@/utils';
 import { PAYMENT_METHODS } from '@/constants/paymentMethods';
-import { APP_CONFIG } from '@/constants/app';
+import { RESTAURANT_FALLBACK_IMAGE } from '@/utils/imageFallbacks';
 
 export default function OrderCard({ order }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -32,7 +32,7 @@ export default function OrderCard({ order }) {
   const paymentMethodDetails = PAYMENT_METHODS.find((m) => m.id === payment.method);
   const itemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
-  const fallbackRestaurantImage = APP_CONFIG.PLACEHOLDER_IMAGE;
+  const fallbackRestaurantImage = RESTAURANT_FALLBACK_IMAGE;
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-300">
@@ -47,6 +47,7 @@ export default function OrderCard({ order }) {
             src={restaurant.image || fallbackRestaurantImage}
             alt={restaurant.name}
             onError={(e) => {
+              e.target.onError = null;
               e.target.src = fallbackRestaurantImage;
             }}
             className="w-14 h-14 rounded-2xl object-cover shrink-0 border border-slate-100 shadow-sm"

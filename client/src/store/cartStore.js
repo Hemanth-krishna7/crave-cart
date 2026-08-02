@@ -78,3 +78,8 @@ export const selectRestaurantGroupCount = (state) => {
   const uniqueRestaurants = new Set(state.cartItems.map((item) => item.restaurantId));
   return uniqueRestaurants.size;
 };
+
+export const selectItemQuantity = (itemId) => (state) => {
+  const item = state.cartItems.find((i) => i.id === itemId);
+  return item ? item.quantity : 0;
+};

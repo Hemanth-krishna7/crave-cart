@@ -9,8 +9,8 @@ export default function CTASection() {
           Ready to satisfy your cravings?
         </h2>
         <p className="text-indigo-200 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-          Explore menus from top-rated restaurants near you. Simple ordering, real-time tracking,
-          and fresh delivery.
+          Explore menus from top-rated restaurants near you. Simple ordering, simulated tracking,
+          and fast checkout.
         </p>
         <div className="pt-2">
           <Link

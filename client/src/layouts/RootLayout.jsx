@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { Outlet, Link, NavLink } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { THEME } from '@/constants/theme';
-import { APP_CONFIG } from '@/constants/app';
 import { useCartStore, selectRestaurantGroupCount } from '@/store/cartStore';
+import { useFavoritesStore, selectTotalFavoriteCount } from '@/store/favoritesStore';
 
 export default function RootLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const restaurantGroupCount = useCartStore(selectRestaurantGroupCount);
+  const totalFavorites = useFavoritesStore(selectTotalFavoriteCount);
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -37,7 +38,7 @@ export default function RootLayout() {
                     key={link.path}
                     to={link.path}
                     className={({ isActive }) =>
-                      `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      `px-3 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center ${
                         isActive
                           ? 'text-indigo-600 bg-indigo-50/50'
                           : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
@@ -45,6 +46,11 @@ export default function RootLayout() {
                     }
                   >
                     {link.label}
+                    {link.label === 'Favorites' && totalFavorites > 0 && (
+                      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] font-bold bg-rose-100 text-rose-600 rounded-full">
+                        {totalFavorites}
+                      </span>
+                    )}
                   </NavLink>
                 ))}
               </nav>
@@ -71,15 +77,6 @@ export default function RootLayout() {
                     {restaurantGroupCount}
                   </span>
                 )}
-              </Link>
-
-              {/* User Profile Link Placeholder */}
-              <Link
-                to={ROUTES.PROFILE}
-                className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-700 font-semibold text-sm border border-orange-200 hover:opacity-90 transition-opacity"
-                aria-label="User Profile"
-              >
-                U
               </Link>
             </div>
 
@@ -145,28 +142,21 @@ export default function RootLayout() {
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
+                  `px-3 py-2 rounded-lg text-base font-medium transition-colors flex items-center justify-between ${
                     isActive
                       ? 'text-indigo-600 bg-indigo-50/50'
                       : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
                   }`
                 }
               >
-                {link.label}
+                <span>{link.label}</span>
+                {link.label === 'Favorites' && totalFavorites > 0 && (
+                  <span className="px-2 py-0.5 text-xs font-bold bg-rose-100 text-rose-600 rounded-full">
+                    {totalFavorites}
+                  </span>
+                )}
               </NavLink>
             ))}
-            <div className="border-t border-slate-100 my-2 pt-2 flex items-center justify-between px-3">
-              <Link
-                to={ROUTES.PROFILE}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-slate-600 hover:text-indigo-600 text-sm font-medium flex items-center gap-2"
-              >
-                <div className="flex items-center justify-center w-7 h-7 rounded-full bg-indigo-100 text-indigo-700 font-semibold text-xs border border-indigo-200">
-                  U
-                </div>
-                My Account
-              </Link>
-            </div>
           </div>
         )}
       </header>
@@ -233,11 +223,6 @@ export default function RootLayout() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.PROFILE} className="hover:text-white transition-colors">
-                    My Account
-                  </Link>
-                </li>
-                <li>
                   <Link to={ROUTES.TERMS} className="hover:text-white transition-colors">
                     Terms of Service
                   </Link>
@@ -251,56 +236,26 @@ export default function RootLayout() {
             </div>
 
             {/* Column 4: Contact details */}
+            {/* Column 4: Contact Us */}
             <div>
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
                 Contact Us
               </h3>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <a
-                    href={`mailto:${APP_CONFIG.SUPPORT_EMAIL}`}
-                    className="hover:text-white transition-colors"
-                  >
-                    {APP_CONFIG.SUPPORT_EMAIL}
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <span>1800-CRAVE-CART</span>
-                </li>
-              </ul>
+              <p className="text-sm text-slate-400 mb-4 leading-relaxed">
+                Have feedback or questions? Reach out to us using the contact form.
+              </p>
+              <Link
+                to={ROUTES.CONTACT}
+                className="inline-flex px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition duration-200 cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              >
+                Contact Page
+              </Link>
             </div>
           </div>
 
           {/* Bottom Copyright Area */}
-          <div className="border-t border-slate-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <div className="border-t border-slate-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-center md:text-left">
             <p>&copy; {new Date().getFullYear()} {THEME.BRAND_NAME}. All rights reserved.</p>
-            <div className="flex gap-4">
-              <a href="#facebook" className="hover:text-white transition-colors">
-                Facebook
-              </a>
-              <a href="#twitter" className="hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="#instagram" className="hover:text-white transition-colors">
-                Instagram
-              </a>
-            </div>
           </div>
         </div>
       </footer>
