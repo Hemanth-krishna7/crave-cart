@@ -8,7 +8,7 @@ export default function SortDropdown({ value = 'popular', onChange }) {
 
   return (
     <div className="flex items-center gap-2">
-      <label htmlFor="sort-dropdown" className="text-xs font-bold uppercase tracking-wider text-slate-400 shrink-0 font-heading">
+      <label htmlFor="sort-dropdown" className="text-xs font-bold uppercase tracking-wider text-slate-400 shrink-0">
         Sort By
       </label>
       <div className="relative">
@@ -17,10 +17,10 @@ export default function SortDropdown({ value = 'popular', onChange }) {
           value={value}
           onChange={(e) => onChange(e.target.value)}
           aria-label="Sort restaurants by"
-          className="appearance-none bg-white border border-slate-200 rounded-xl pl-3 pr-8 py-2 text-xs font-bold text-slate-700 shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 cursor-pointer transition"
+          className="appearance-none bg-white/5 border border-white/10 rounded-lg pl-3 pr-8 py-2 text-xs font-bold text-white shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 cursor-pointer transition backdrop-blur-md"
         >
           {options.map((opt) => (
-            <option key={opt.value} value={opt.value}>
+            <option key={opt.value} value={opt.value} className="bg-slate-900 text-white">
               {opt.label}
             </option>
           ))}

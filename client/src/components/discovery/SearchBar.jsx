@@ -18,7 +18,7 @@ export default function SearchBar({ value = '', onChange, onClear, placeholder =
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         aria-label="Search restaurants"
-        className="w-full pl-11 pr-10 py-3.5 bg-white rounded-2xl border border-slate-200 text-slate-800 placeholder-slate-400 text-sm font-medium shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-150"
+        className="w-full pl-11 pr-12 py-3.5 bg-white/5 rounded-xl border border-white/10 text-white placeholder-slate-400 text-sm font-medium shadow-md backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition duration-200"
       />
 
       {value && (
@@ -26,9 +26,9 @@ export default function SearchBar({ value = '', onChange, onClear, placeholder =
           type="button"
           onClick={onClear}
           aria-label="Clear search query"
-          className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 transition"
+          className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-white transition duration-200"
         >
-          <div className="w-5 h-5 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-xs font-bold">
+          <div className="w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[10px] font-extrabold text-slate-300">
             ✕
           </div>
         </button>
