@@ -3,60 +3,59 @@ import { ROUTES } from '@/constants/routes';
 
 export default function HeroSection() {
   return (
-    <div className="relative py-12 md:py-20 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left: Typography & CTA */}
-        <div className="space-y-6 max-w-xl">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
-            Fresh & Fast Delivery
+    <div className="relative flex items-center min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+      {/* Left-aligned content container */}
+      <div className="relative z-10 max-w-2xl space-y-8 text-left">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2">
+          <span className="h-px w-8 bg-orange-500" />
+          <span className="text-xs uppercase font-extrabold tracking-widest text-orange-500">
+            Fresh Food • Fast Delivery
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Crave it? <br />
-            We&apos;ll <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">cart it.</span>
-          </h1>
-          <p className="text-lg text-slate-500 leading-relaxed">
-            Get your favorite meals from the best local restaurants delivered fresh and hot to your
-            doorstep in minutes. Satisfy your cravings with CraveCart.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Link
-              to={ROUTES.RESTAURANTS}
-              className="px-6 py-3 text-sm font-semibold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow-indigo-100 hover:translate-y-[-1px] active:translate-y-0 transition"
-            >
-              Browse Restaurants
-            </Link>
-            <a
-              href="#why-us"
-              className="px-6 py-3 text-sm font-semibold rounded-xl text-slate-700 bg-slate-100 hover:bg-slate-200 hover:translate-y-[-1px] active:translate-y-0 transition"
-            >
-              Learn More
-            </a>
-          </div>
         </div>
 
-        {/* Right: Premium Hero Image */}
-        <div className="relative lg:block">
-          <div className="relative mx-auto max-w-[500px] lg:max-w-none">
-            {/* Background Blob decoration */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-violet-200 rounded-3xl transform rotate-3 scale-95 opacity-70 filter blur-xl"></div>
-            
-            {/* Image Element */}
-            <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop"
-              alt="Delicious gourmet food spread"
-              className="relative rounded-3xl shadow-xl w-full object-cover aspect-video sm:aspect-[4/3] max-h-[400px] border border-slate-200/50"
-            />
-            
-            {/* Overlay Glass Card placeholder */}
-            <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur border border-slate-200/80 rounded-2xl p-4 shadow-lg hidden sm:flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
-                ✓
-              </div>
-              <div>
-                <p className="text-xs text-slate-400">Average Delivery Time</p>
-                <p className="text-sm font-bold text-slate-800">Under 25 Minutes</p>
-              </div>
-            </div>
+        {/* Headline */}
+        <h1 className="text-5xl sm:text-7xl md:text-8xl tracking-tight text-white leading-none font-extrabold">
+          <span className="block font-serif italic font-normal text-slate-100 mb-2">Crave it?</span>
+          <span className="block">
+            We&apos;ll <span className="text-orange-500">cart it.</span>
+          </span>
+        </h1>
+
+        {/* Description */}
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed font-light">
+          Discover a complete culinary catalog. Browse top-rated local kitchens, explore individual dishes, and enjoy a seamless simulated ordering experience delivered right to your screen.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap gap-4 pt-2">
+          <Link
+            to={ROUTES.RESTAURANTS}
+            className="px-8 py-4 bg-orange-600 hover:bg-orange-750 text-white font-bold rounded-xl shadow-lg shadow-orange-950/20 transition-all duration-200 text-sm hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-orange-500/50 cursor-pointer"
+          >
+            Browse Restaurants
+          </Link>
+          <Link
+            to={`${ROUTES.RESTAURANTS}?mode=dishes`}
+            className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 font-bold rounded-xl transition-all duration-200 text-sm hover:translate-y-[-1px] backdrop-blur-xs focus:outline-none focus:ring-2 focus:ring-white/30 cursor-pointer"
+          >
+            Explore Dishes
+          </Link>
+        </div>
+
+        {/* Trust / Product Metrics */}
+        <div className="pt-8 border-t border-white/5 grid grid-cols-3 gap-6 max-w-md">
+          <div>
+            <p className="text-2xl sm:text-3xl font-extrabold text-white">26</p>
+            <p className="text-xs sm:text-sm text-slate-400 font-medium">Local Restaurants</p>
+          </div>
+          <div>
+            <p className="text-2xl sm:text-3xl font-extrabold text-white">266</p>
+            <p className="text-xs sm:text-sm text-slate-400 font-medium">Unique Dishes</p>
+          </div>
+          <div>
+            <p className="text-2xl sm:text-3xl font-extrabold text-white">Multiple</p>
+            <p className="text-xs sm:text-sm text-slate-400 font-medium">Gourmet Cuisines</p>
           </div>
         </div>
       </div>

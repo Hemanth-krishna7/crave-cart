@@ -21,10 +21,10 @@ export default function DiscoveryFilters({
   ];
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 p-4 sm:p-5 shadow-xs space-y-4">
+    <div className="bg-neutral-900/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 sm:p-5 shadow-lg space-y-4">
       {/* Cuisine Filter Pills / Scrollable list */}
       <div className="space-y-2">
-        <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 font-heading">
+        <label className="block text-xs font-bold uppercase tracking-wider text-slate-400">
           Cuisine
         </label>
         <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
@@ -34,10 +34,10 @@ export default function DiscoveryFilters({
               <button
                 key={cuisine}
                 onClick={() => onCuisineChange(cuisine)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/20 ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/20 ${
                   isActive
-                    ? 'bg-orange-600 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    ? 'bg-orange-600 text-white shadow-md'
+                    : 'bg-white/5 text-slate-350 hover:bg-white/10 hover:text-white'
                 }`}
               >
                 {cuisine}
@@ -48,10 +48,10 @@ export default function DiscoveryFilters({
       </div>
 
       {/* Grid for Availability and Rating dropdowns / pills */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/5">
         {/* Availability */}
         <div className="space-y-1.5">
-          <label htmlFor="availability-select" className="block text-xs font-bold uppercase tracking-wider text-slate-400 font-heading">
+          <label htmlFor="availability-select" className="block text-xs font-bold uppercase tracking-wider text-slate-400">
             Availability
           </label>
           <div className="flex items-center gap-1.5">
@@ -61,10 +61,10 @@ export default function DiscoveryFilters({
                 <button
                   key={opt.value}
                   onClick={() => onAvailabilityChange(opt.value)}
-                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-semibold text-center transition cursor-pointer ${
+                  className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold text-center transition duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/20 ${
                     isActive
-                      ? 'bg-slate-800 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-orange-600 text-white shadow-md'
+                      : 'bg-white/5 text-slate-350 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {opt.label}
@@ -76,7 +76,7 @@ export default function DiscoveryFilters({
 
         {/* Rating */}
         <div className="space-y-1.5">
-          <label htmlFor="rating-select" className="block text-xs font-bold uppercase tracking-wider text-slate-400 font-heading">
+          <label htmlFor="rating-select" className="block text-xs font-bold uppercase tracking-wider text-slate-400">
             Minimum Rating
           </label>
           <div className="flex items-center gap-1.5">
@@ -86,10 +86,10 @@ export default function DiscoveryFilters({
                 <button
                   key={opt.value}
                   onClick={() => onRatingChange(opt.value)}
-                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-semibold text-center transition cursor-pointer ${
+                  className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold text-center transition duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/20 ${
                     isActive
-                      ? 'bg-amber-500 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-amber-500 text-white shadow-md'
+                      : 'bg-white/5 text-slate-355 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {opt.label}

@@ -134,23 +134,33 @@ export default function Restaurants() {
     <PageWrapper title="Browse Discovery" className="pb-16" containerClassName="max-w-7xl">
       <div className="space-y-6">
         {/* Header Info & Segmented Discovery Mode Switch */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-                Browse {discoveryMode === 'dishes' ? 'Dishes' : 'Restaurants'}
-              </h1>
-              <DiscoveryModeTabs mode={discoveryMode} onChange={setDiscoveryMode} />
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/5 pb-6">
+          <div className="space-y-3">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2">
+              <span className="h-px w-6 bg-orange-500" />
+              <span className="text-[10px] uppercase font-extrabold tracking-widest text-orange-500">
+                Discover CraveCart
+              </span>
             </div>
-            <p className="text-sm sm:text-base text-slate-500 max-w-xl">
+
+            <div className="flex items-center gap-4 flex-wrap">
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-none">
+                Find something <span className="font-serif italic font-normal text-slate-200">worth craving.</span>
+              </h1>
+            </div>
+            <p className="text-sm text-slate-400 max-w-xl leading-relaxed">
               {discoveryMode === 'dishes'
                 ? 'Explore delicious dishes available across top local kitchens and order directly to your door.'
                 : 'Discover top local kitchens, gourmet flavors, and fresh menu items delivered directly to your doorstep.'}
             </p>
           </div>
 
-          <div className="text-xs font-semibold text-slate-400 bg-slate-100 px-3 py-1.5 rounded-xl shrink-0 self-start md:self-auto">
-            Showing <span className="font-bold text-slate-800">{processedItems.length}</span> {discoveryMode === 'dishes' ? 'dishes' : 'restaurants'}
+          <div className="flex items-center gap-3 self-start md:self-end">
+            <DiscoveryModeTabs mode={discoveryMode} onChange={setDiscoveryMode} />
+            <div className="text-xs font-bold text-slate-400 bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-lg shrink-0">
+              Showing <span className="text-orange-400">{processedItems.length}</span> {discoveryMode === 'dishes' ? 'Dishes' : 'Restaurants'}
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import PageWrapper from '@/components/common/PageWrapper';
+import { useEffect } from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import CategoryCard from '@/components/home/CategoryCard';
 import RestaurantCard from '@/components/common/RestaurantCard';
@@ -8,6 +8,10 @@ import { CATEGORIES } from '@/data/categories';
 import { RESTAURANTS } from '@/data/restaurants';
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Home | CraveCart';
+  }, []);
+
   const features = [
     {
       title: 'Super Fast Delivery',
@@ -60,68 +64,71 @@ export default function Home() {
   ];
 
   return (
-    <PageWrapper title="Home" className="space-y-16 sm:space-y-24 pb-16">
-      {/* 1. Hero Section */}
+    <div className="flex flex-col min-h-screen">
+      {/* 1. Immersive Hero Section */}
       <HeroSection />
 
-      {/* 2. Categories Preview */}
-      <section className="space-y-6">
-        <div className="text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Browse by Category
-          </h2>
-          <p className="mt-1 text-sm text-slate-500">
-            Find exactly what you are craving from our diverse categories.
-          </p>
-        </div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 sm:gap-8 justify-items-center">
-          {CATEGORIES.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
-        </div>
-      </section>
+      {/* Content Container for remaining sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16 sm:space-y-24 w-full">
+        {/* 2. Categories Preview */}
+        <section className="space-y-6">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Browse by Category
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              Find exactly what you are craving from our diverse categories.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 sm:gap-8 justify-items-center">
+            {CATEGORIES.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
+          </div>
+        </section>
 
-      {/* 3. Featured Restaurants */}
-      <section className="space-y-8">
-        <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Featured Restaurants
-          </h2>
-          <p className="mt-1 text-sm text-slate-500">
-            Handpicked selections with top-tier ratings and fast delivery.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {RESTAURANTS.filter((res) => res.featured).map((restaurant) => (
-            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-          ))}
-        </div>
-      </section>
+        {/* 3. Featured Restaurants */}
+        <section className="space-y-8">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Featured Restaurants
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              Handpicked selections with top-tier ratings and fast delivery.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {RESTAURANTS.filter((res) => res.featured).map((restaurant) => (
+              <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+            ))}
+          </div>
+        </section>
 
-      {/* 4. Why Choose CraveCart */}
-      <section id="why-us" className="space-y-8 scroll-mt-20">
-        <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Why Choose CraveCart?
-          </h2>
-          <p className="mt-2 text-sm text-slate-500 max-w-md mx-auto">
-            We work with the best in town to offer you high-quality choices and flawless service.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {features.map((feature, idx) => (
-            <FeatureCard
-              key={idx}
-              title={feature.title}
-              description={feature.description}
-              icon={feature.icon}
-            />
-          ))}
-        </div>
-      </section>
+        {/* 4. Why Choose CraveCart */}
+        <section id="why-us" className="space-y-8 scroll-mt-20">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Why Choose CraveCart?
+            </h2>
+            <p className="mt-2 text-sm text-slate-500 max-w-md mx-auto">
+              We work with the best in town to offer you high-quality choices and flawless service.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {features.map((feature, idx) => (
+              <FeatureCard
+                key={idx}
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+              />
+            ))}
+          </div>
+        </section>
 
-      {/* 5. Final Call-to-Action Section */}
-      <CTASection />
-    </PageWrapper>
+        {/* 5. Final Call-to-Action Section */}
+        <CTASection />
+      </div>
+    </div>
   );
 }

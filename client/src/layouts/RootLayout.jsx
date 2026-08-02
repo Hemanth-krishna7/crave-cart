@@ -1,14 +1,20 @@
 import { useState } from 'react';
-import { Outlet, Link, NavLink } from 'react-router-dom';
+import { Outlet, Link, NavLink, useLocation } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 import { THEME } from '@/constants/theme';
 import { useCartStore, selectRestaurantGroupCount } from '@/store/cartStore';
 import { useFavoritesStore, selectTotalFavoriteCount } from '@/store/favoritesStore';
+import foodBg from '@/assets/food-background.jpg';
 
 export default function RootLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const restaurantGroupCount = useCartStore(selectRestaurantGroupCount);
   const totalFavorites = useFavoritesStore(selectTotalFavoriteCount);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  const isDiscovery = location.pathname === ROUTES.RESTAURANTS;
+  const isDarkEnv = isHome || isDiscovery;
+  const isHeaderDark = isDarkEnv;
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -18,15 +24,57 @@ export default function RootLayout() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className={`relative flex flex-col min-h-screen transition-colors duration-500 ${
+      isDarkEnv ? 'bg-[#0c0c0c] text-slate-100' : 'bg-slate-50 text-slate-900'
+    } selection:bg-indigo-100 selection:text-indigo-900`}>
+      {/* Layer 1: Background Image */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <img 
+          src={foodBg} 
+          alt="" 
+          className={`w-full h-full object-cover object-center scale-102 transition-all duration-750 ${
+            isHome 
+              ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
+              : isDiscovery
+                ? 'filter brightness-[0.5] contrast-[1.05] opacity-[0.45] blur-[1px]'
+                : 'filter blur-[1px] opacity-[0.38]'
+          }`}
+        />
+      </div>
+
+      {/* Layer 2: Transparent Atmospheric Overlay & Gradient */}
+      <div 
+        className={`fixed inset-0 z-0 pointer-events-none transition-all duration-750 ${
+          isHome 
+            ? 'bg-gradient-to-r from-black via-black/75 to-transparent' 
+            : isDiscovery
+              ? 'bg-gradient-to-b from-black/90 via-neutral-950/92 to-[#0c0c0c]'
+              : 'bg-gradient-to-br from-slate-50/88 via-slate-50/84 to-indigo-50/72'
+        }`}
+        aria-hidden="true"
+      />
+
+      {/* Layer 3: Application UI Container */}
+      <div className="relative z-10 flex flex-col min-h-screen">
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200/80">
+      <header className={`sticky top-0 z-50 transition-all duration-300 ${
+        isHeaderDark 
+          ? 'bg-[#0c0c0c]/40 backdrop-blur-md border-b border-white/5 shadow-xs' 
+          : 'bg-white/85 backdrop-blur-md border-b border-slate-200/80'
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center gap-8">
               <Link to={ROUTES.HOME} className="flex items-center gap-2">
-                <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+                <span className={`text-2xl font-extrabold tracking-tight ${
+                  isHeaderDark 
+                    ? 'text-white' 
+                    : 'bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent'
+                }`}>
                   {THEME.BRAND_NAME}
                 </span>
               </Link>
@@ -40,14 +88,20 @@ export default function RootLayout() {
                     className={({ isActive }) =>
                       `px-3 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center ${
                         isActive
-                          ? 'text-indigo-600 bg-indigo-50/50'
-                          : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
+                          ? isHeaderDark
+                            ? 'text-white bg-white/10'
+                            : 'text-indigo-600 bg-indigo-50/50'
+                          : isHeaderDark
+                            ? 'text-slate-300 hover:text-white hover:bg-white/5'
+                            : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
                       }`
                     }
                   >
                     {link.label}
                     {link.label === 'Favorites' && totalFavorites > 0 && (
-                      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] font-bold bg-rose-100 text-rose-600 rounded-full">
+                      <span className={`ml-1.5 px-1.5 py-0.5 text-[10px] font-bold rounded-full ${
+                        isHeaderDark ? 'bg-orange-600 text-white' : 'bg-rose-100 text-rose-600'
+                      }`}>
                         {totalFavorites}
                       </span>
                     )}
@@ -58,10 +112,14 @@ export default function RootLayout() {
 
             {/* Right Header Actions */}
             <div className="hidden md:flex items-center gap-4">
-              {/* Cart Button Placeholder */}
+              {/* Cart Button */}
               <Link
                 to={ROUTES.CART}
-                className="relative p-2 text-slate-600 hover:text-orange-600 hover:bg-slate-50 rounded-lg transition-colors"
+                className={`relative p-2 rounded-lg transition-colors ${
+                  isHeaderDark 
+                    ? 'text-slate-300 hover:text-white hover:bg-white/5' 
+                    : 'text-slate-600 hover:text-orange-600 hover:bg-slate-50'
+                }`}
                 aria-label="View Cart"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,7 +143,11 @@ export default function RootLayout() {
               {/* Mobile Cart Shortcut */}
               <Link
                 to={ROUTES.CART}
-                className="relative p-2 mr-2 text-slate-600 hover:text-orange-600 rounded-lg"
+                className={`relative p-2 mr-2 rounded-lg ${
+                  isHeaderDark 
+                    ? 'text-slate-300 hover:text-white' 
+                    : 'text-slate-600 hover:text-orange-600'
+                }`}
                 aria-label="View Cart"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,7 +167,11 @@ export default function RootLayout() {
 
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-colors focus:outline-none"
+                className={`p-2 rounded-lg transition-colors focus:outline-none ${
+                  isHeaderDark 
+                    ? 'text-slate-300 hover:text-white hover:bg-white/5' 
+                    : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
+                }`}
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle Navigation Menu"
               >
@@ -135,7 +201,11 @@ export default function RootLayout() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1">
+          <div className={`md:hidden px-4 pt-2 pb-4 space-y-1 ${
+            isHeaderDark 
+              ? 'bg-[#0c0c0c]/95 border-b border-white/10' 
+              : 'bg-white border-b border-slate-200'
+          }`}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
@@ -144,14 +214,20 @@ export default function RootLayout() {
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg text-base font-medium transition-colors flex items-center justify-between ${
                     isActive
-                      ? 'text-indigo-600 bg-indigo-50/50'
-                      : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
+                      ? isHeaderDark
+                        ? 'text-white bg-white/15'
+                        : 'text-indigo-600 bg-indigo-50/50'
+                      : isHeaderDark
+                        ? 'text-slate-300 hover:text-white hover:bg-white/5'
+                        : 'text-slate-600 hover:text-indigo-600 hover:bg-slate-50'
                   }`
                 }
               >
                 <span>{link.label}</span>
                 {link.label === 'Favorites' && totalFavorites > 0 && (
-                  <span className="px-2 py-0.5 text-xs font-bold bg-rose-100 text-rose-600 rounded-full">
+                  <span className={`px-2 py-0.5 text-xs font-bold rounded-full ${
+                    isHeaderDark ? 'bg-orange-600 text-white' : 'bg-rose-100 text-rose-600'
+                  }`}>
                     {totalFavorites}
                   </span>
                 )}
@@ -167,7 +243,7 @@ export default function RootLayout() {
       </main>
 
       {/* Responsive Footer */}
-      <footer className="bg-slate-900 text-slate-400 border-t border-slate-800">
+      <footer className="bg-slate-900/95 backdrop-blur-md text-slate-400 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Column 1: Company Profile */}
@@ -259,6 +335,7 @@ export default function RootLayout() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
