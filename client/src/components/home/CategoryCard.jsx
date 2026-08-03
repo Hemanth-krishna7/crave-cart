@@ -7,10 +7,10 @@ export default function CategoryCard({ category }) {
   return (
     <Link
       to={discoveryUrl}
-      className="flex flex-col items-center group cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-2xl p-1"
+      className="flex flex-col items-center group cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-2xl p-1"
       aria-label={`Browse ${category.name} restaurants`}
     >
-      <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-transparent group-hover:border-indigo-600 transition-colors duration-200 shadow-sm">
+      <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-transparent group-hover:border-orange-500 transition-colors duration-200 shadow-sm">
         <img
           src={category.image}
           alt={category.name}
@@ -18,7 +18,7 @@ export default function CategoryCard({ category }) {
         />
         <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors duration-200"></div>
       </div>
-      <span className="mt-3 text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors duration-200">
+      <span className="mt-3 text-sm font-semibold text-slate-300 group-hover:text-orange-400 transition-colors duration-200">
         {category.name}
       </span>
     </Link>

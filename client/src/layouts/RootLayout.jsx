@@ -25,7 +25,11 @@ export default function RootLayout() {
 
   return (
     <div className={`relative flex flex-col min-h-screen transition-colors duration-500 ${
-      isDarkEnv ? 'bg-[#0c0c0c] text-slate-100' : 'bg-slate-50 text-slate-900'
+      isHome 
+        ? 'bg-[#0c0c0c] text-slate-100' 
+        : isDiscovery
+          ? 'bg-[#0e0d0c] text-slate-100'
+          : 'bg-slate-50 text-slate-900'
     } selection:bg-indigo-100 selection:text-indigo-900`}>
       {/* Layer 1: Background Image */}
       <div 
@@ -39,21 +43,41 @@ export default function RootLayout() {
             isHome 
               ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
               : isDiscovery
-                ? 'filter brightness-[0.5] contrast-[1.05] opacity-[0.45] blur-[1px]'
+                ? 'filter brightness-[0.38] contrast-[1.02] opacity-[0.16] blur-[2px]'
                 : 'filter blur-[1px] opacity-[0.38]'
           }`}
         />
       </div>
 
       {/* Layer 2: Transparent Atmospheric Overlay & Gradient */}
+      {/* Home Overlay */}
       <div 
-        className={`fixed inset-0 z-0 pointer-events-none transition-all duration-750 ${
-          isHome 
-            ? 'bg-gradient-to-r from-black via-black/75 to-transparent' 
-            : isDiscovery
-              ? 'bg-gradient-to-b from-black/90 via-neutral-950/92 to-[#0c0c0c]'
-              : 'bg-gradient-to-br from-slate-50/88 via-slate-50/84 to-indigo-50/72'
+        className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
+          isHome ? 'opacity-100' : 'opacity-0'
+        } bg-gradient-to-r from-black via-black/75 to-transparent`}
+        aria-hidden="true"
+      />
+      {/* Discovery Overlay Layers */}
+      <div 
+        className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
+          isDiscovery ? 'opacity-100' : 'opacity-0'
         }`}
+        aria-hidden="true"
+      >
+        {/* Layer 3a: Vertical Dark Fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-[#0e0d0c]/50 to-[#0e0d0c]" />
+        
+        {/* Layer 3b: Radial Vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_30%,rgba(14,13,12,0.9)_95%)]" />
+        
+        {/* Layer 4: Subtle Warm Orange Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,88,12,0.06)_0%,rgba(0,0,0,0)_50%)]" />
+      </div>
+      {/* Default Overlay */}
+      <div 
+        className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
+          (!isHome && !isDiscovery) ? 'opacity-100' : 'opacity-0'
+        } bg-gradient-to-br from-slate-50/88 via-slate-50/84 to-indigo-50/72`}
         aria-hidden="true"
       />
 

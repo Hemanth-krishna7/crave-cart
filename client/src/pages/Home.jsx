@@ -73,10 +73,10 @@ export default function Home() {
         {/* 2. Categories Preview */}
         <section className="space-y-6">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Browse by Category
             </h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Find exactly what you are craving from our diverse categories.
             </p>
           </div>
@@ -90,10 +90,10 @@ export default function Home() {
         {/* 3. Featured Restaurants */}
         <section className="space-y-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Featured Restaurants
             </h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               Handpicked selections with top-tier ratings and fast delivery.
             </p>
           </div>
@@ -107,10 +107,10 @@ export default function Home() {
         {/* 4. Why Choose CraveCart */}
         <section id="why-us" className="space-y-8 scroll-mt-20">
           <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Why Choose CraveCart?
             </h2>
-            <p className="mt-2 text-sm text-slate-500 max-w-md mx-auto">
+            <p className="mt-2 text-sm text-slate-400 max-w-md mx-auto">
               We work with the best in town to offer you high-quality choices and flawless service.
             </p>
           </div>

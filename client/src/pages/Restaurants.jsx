@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import PageWrapper from '@/components/common/PageWrapper';
 import RestaurantCard from '@/components/common/RestaurantCard';
@@ -9,7 +9,6 @@ import DiscoveryFilters from '@/components/discovery/DiscoveryFilters';
 import SortDropdown from '@/components/discovery/SortDropdown';
 import ActiveFilters from '@/components/discovery/ActiveFilters';
 import EmptyResults from '@/components/discovery/EmptyResults';
-import { useDiscoveryStore } from '@/store/discoveryStore';
 import {
   extractDynamicCuisines,
   applyUnifiedDiscovery,
@@ -21,77 +20,43 @@ import { MENU_ITEMS } from '@/data/menu';
 export default function Restaurants() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const discoveryMode = useDiscoveryStore((state) => state.discoveryMode);
-  const searchQuery = useDiscoveryStore((state) => state.searchQuery);
-  const selectedCuisine = useDiscoveryStore((state) => state.selectedCuisine);
-  const selectedAvailability = useDiscoveryStore((state) => state.selectedAvailability);
-  const selectedRating = useDiscoveryStore((state) => state.selectedRating);
-  const selectedSort = useDiscoveryStore((state) => state.selectedSort);
+  const discoveryMode = searchParams.get('mode') || 'restaurants';
+  const searchQuery = searchParams.get('search') || '';
+  const selectedCuisine = searchParams.get('cuisine') || 'All';
+  const selectedAvailability = searchParams.get('availability') || 'all';
+  const selectedRating = searchParams.get('rating') || 'all';
+  const selectedSort = searchParams.get('sort') || 'popular';
 
-  const setDiscoveryMode = useDiscoveryStore((state) => state.setDiscoveryMode);
-  const setSearchQuery = useDiscoveryStore((state) => state.setSearchQuery);
-  const setSelectedCuisine = useDiscoveryStore((state) => state.setSelectedCuisine);
-  const setSelectedAvailability = useDiscoveryStore((state) => state.setSelectedAvailability);
-  const setSelectedRating = useDiscoveryStore((state) => state.setSelectedRating);
-  const setSelectedSort = useDiscoveryStore((state) => state.setSelectedSort);
-  const removeFilter = useDiscoveryStore((state) => state.removeFilter);
-  const resetFilters = useDiscoveryStore((state) => state.resetFilters);
-  const setAllState = useDiscoveryStore((state) => state.setAllState);
-
-  // 1. Synchronize URL query parameters into Discovery Store on mount or external URL change
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') || 'restaurants';
-    const urlSearch = searchParams.get('search') || '';
-    const urlCuisine = searchParams.get('cuisine') || 'All';
-    const urlAvailability = searchParams.get('availability') || 'all';
-    const urlRating = searchParams.get('rating') || 'all';
-    const urlSort = searchParams.get('sort') || 'popular';
-
-    setAllState({
-      discoveryMode: urlMode,
-      searchQuery: urlSearch,
-      selectedCuisine: urlCuisine,
-      selectedAvailability: urlAvailability,
-      selectedRating: urlRating,
-      selectedSort: urlSort,
-    });
-  }, [searchParams, setAllState]);
-
-  // 2. Synchronize Discovery Store state changes to URL query parameters while preserving unrelated params
-  useEffect(() => {
+  const updateParam = (key, value, defaultValue) => {
     const newParams = new URLSearchParams(searchParams);
-
-    if (discoveryMode && discoveryMode !== 'restaurants') newParams.set('mode', discoveryMode);
-    else newParams.delete('mode');
-
-    if (searchQuery && searchQuery.trim()) newParams.set('search', searchQuery.trim());
-    else newParams.delete('search');
-
-    if (selectedCuisine && selectedCuisine !== 'All') newParams.set('cuisine', selectedCuisine);
-    else newParams.delete('cuisine');
-
-    if (selectedAvailability && selectedAvailability !== 'all') newParams.set('availability', selectedAvailability);
-    else newParams.delete('availability');
-
-    if (selectedRating && selectedRating !== 'all') newParams.set('rating', selectedRating);
-    else newParams.delete('rating');
-
-    if (selectedSort && selectedSort !== 'popular') newParams.set('sort', selectedSort);
-    else newParams.delete('sort');
-
-    if (newParams.toString() !== searchParams.toString()) {
-      setSearchParams(newParams, { replace: true });
+    if (value && value !== defaultValue) {
+      newParams.set(key, value);
+    } else {
+      newParams.delete(key);
     }
-  }, [
-    discoveryMode,
-    searchQuery,
-    selectedCuisine,
-    selectedAvailability,
-    selectedRating,
-    selectedSort,
-    searchParams,
-    setSearchParams,
-  ]);
+    setSearchParams(newParams, { replace: true });
+  };
+
+  const setDiscoveryMode = (mode) => updateParam('mode', mode, 'restaurants');
+  const setSearchQuery = (q) => updateParam('search', q, '');
+  const setSelectedCuisine = (c) => updateParam('cuisine', c, 'All');
+  const setSelectedAvailability = (a) => updateParam('availability', a, 'all');
+  const setSelectedRating = (r) => updateParam('rating', r, 'all');
+  const setSelectedSort = (s) => updateParam('sort', s, 'popular');
+
+  const removeFilter = (filterKey) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (filterKey === 'searchQuery') newParams.delete('search');
+    else if (filterKey === 'selectedCuisine') newParams.delete('cuisine');
+    else if (filterKey === 'selectedAvailability') newParams.delete('availability');
+    else if (filterKey === 'selectedRating') newParams.delete('rating');
+    else if (filterKey === 'selectedSort') newParams.delete('sort');
+    setSearchParams(newParams, { replace: true });
+  };
+
+  const resetFilters = () => {
+    setSearchParams(new URLSearchParams(), { replace: true });
+  };
 
   // 3. Dynamic Cuisines extraction
   const dynamicCuisines = useMemo(() => extractDynamicCuisines(RESTAURANTS), []);
