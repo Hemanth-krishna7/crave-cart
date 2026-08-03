@@ -6,12 +6,12 @@ export default function PaymentMethodSelector() {
   const selectedMethod = watch('paymentMethod');
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-6">
-      <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+    <div className="bg-neutral-900/60 rounded-xl border border-white/5 p-6 shadow-lg space-y-6 backdrop-blur-md">
+      <div className="flex items-center gap-2 border-b border-white/5 pb-3">
         <span className="text-xl" role="img" aria-label="payment">
           💳
         </span>
-        <h3 className="text-lg font-bold text-slate-800 font-heading">Payment Method</h3>
+        <h3 className="text-lg font-bold text-white font-heading">Payment Method</h3>
       </div>
 
       <div className="space-y-3" role="radiogroup" aria-label="Select Payment Method">
@@ -20,8 +20,8 @@ export default function PaymentMethodSelector() {
           return (
             <label
               key={method.id}
-              className={`relative flex items-start gap-4 p-4 rounded-2xl border-2 cursor-pointer transition duration-150 hover:bg-slate-50 ${
-                isSelected ? 'border-orange-500 bg-orange-50/10' : 'border-slate-200 bg-white'
+              className={`relative flex items-start gap-4 p-4 rounded-xl border-2 cursor-pointer transition duration-200 ${
+                isSelected ? 'border-orange-500 bg-orange-500/10' : 'border-white/10 bg-white/5 hover:bg-white/10'
               }`}
             >
               <input
@@ -34,7 +34,7 @@ export default function PaymentMethodSelector() {
               {/* Custom radio button visual */}
               <span
                 className={`mt-1 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full border transition-all ${
-                  isSelected ? 'border-orange-500 bg-orange-500' : 'border-slate-350 border-slate-300 bg-white'
+                  isSelected ? 'border-orange-500 bg-orange-500' : 'border-white/20 bg-white/10'
                 }`}
               >
                 {isSelected && <span className="h-1.5 w-1.5 rounded-full bg-white" />}
@@ -46,9 +46,9 @@ export default function PaymentMethodSelector() {
                   <span className="text-lg" role="img" aria-label={method.label}>
                     {method.icon}
                   </span>
-                  <span className="text-sm font-bold text-slate-800">{method.label}</span>
+                  <span className="text-sm font-bold text-white">{method.label}</span>
                 </div>
-                <p className="text-xs text-slate-500 mt-1 leading-relaxed">{method.description}</p>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">{method.description}</p>
               </div>
             </label>
           );

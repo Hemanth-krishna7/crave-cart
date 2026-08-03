@@ -9,17 +9,17 @@ export default function DeliveryReviewCard({ formData, onEdit }) {
       action={
         <button
           onClick={onEdit}
-          className="text-sm font-bold text-orange-600 hover:text-orange-700 hover:underline focus:outline-none cursor-pointer"
+          className="text-sm font-bold text-orange-400 hover:text-orange-500 hover:underline focus:outline-none cursor-pointer"
         >
           Edit
         </button>
       }
     >
-      <div className="space-y-1 text-sm text-slate-700">
-        <p className="font-bold text-slate-900 text-base">{fullName}</p>
+      <div className="space-y-1 text-sm text-slate-350">
+        <p className="font-bold text-white text-base">{fullName}</p>
         <p className="font-medium">{phoneNumber}</p>
-        <p className="mt-2 text-slate-600">{addressLine}</p>
-        <p className="text-slate-600">
+        <p className="mt-2 text-slate-300">{addressLine}</p>
+        <p className="text-slate-300">
           {city}, {state} - {pincode}
         </p>
       </div>

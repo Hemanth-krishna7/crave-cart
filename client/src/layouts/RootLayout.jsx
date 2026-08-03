@@ -13,8 +13,8 @@ export default function RootLayout() {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const isDiscovery = location.pathname === ROUTES.RESTAURANTS;
-  const isDarkEnv = isHome || isDiscovery;
-  const isHeaderDark = isDarkEnv;
+  const isDarkEnv = true;
+  const isHeaderDark = true;
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -25,12 +25,8 @@ export default function RootLayout() {
 
   return (
     <div className={`relative flex flex-col min-h-screen transition-colors duration-500 ${
-      isHome 
-        ? 'bg-[#0c0c0c] text-slate-100' 
-        : isDiscovery
-          ? 'bg-[#0e0d0c] text-slate-100'
-          : 'bg-slate-50 text-slate-900'
-    } selection:bg-indigo-100 selection:text-indigo-900`}>
+      isHome ? 'bg-[#0c0c0c]' : 'bg-[#0e0d0c]'
+    } text-slate-100 selection:bg-orange-500/30 selection:text-white`}>
       {/* Layer 1: Background Image */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none select-none overflow-hidden"
@@ -43,8 +39,8 @@ export default function RootLayout() {
             isHome 
               ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
               : isDiscovery
-                ? 'filter brightness-[0.38] contrast-[1.02] opacity-[0.16] blur-[2px]'
-                : 'filter blur-[1px] opacity-[0.38]'
+                ? 'filter brightness-[0.48] contrast-[1.02] opacity-[0.24] blur-[1px]'
+                : 'filter brightness-[0.25] contrast-[1.0] opacity-[0.08] blur-[2px]'
           }`}
         />
       </div>
@@ -65,19 +61,19 @@ export default function RootLayout() {
         aria-hidden="true"
       >
         {/* Layer 3a: Vertical Dark Fade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-[#0e0d0c]/50 to-[#0e0d0c]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#0e0d0c]/40 to-[#0e0d0c]" />
         
         {/* Layer 3b: Radial Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_30%,rgba(14,13,12,0.9)_95%)]" />
         
         {/* Layer 4: Subtle Warm Orange Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,88,12,0.06)_0%,rgba(0,0,0,0)_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,88,12,0.11)_0%,rgba(0,0,0,0)_50%)]" />
       </div>
       {/* Default Overlay */}
       <div 
         className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
           (!isHome && !isDiscovery) ? 'opacity-100' : 'opacity-0'
-        } bg-gradient-to-br from-slate-50/88 via-slate-50/84 to-indigo-50/72`}
+        } bg-gradient-to-br from-[#0c0c0c] via-[#0e0d0c] to-[#0a0a09]`}
         aria-hidden="true"
       />
 
@@ -267,12 +263,12 @@ export default function RootLayout() {
       </main>
 
       {/* Responsive Footer */}
-      <footer className="bg-slate-900/95 backdrop-blur-md text-slate-400 border-t border-slate-800">
+      <footer className="bg-black/90 backdrop-blur-md text-slate-400 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Column 1: Company Profile */}
             <div className="space-y-4">
-              <span className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
                 {THEME.BRAND_NAME}
               </span>
               <p className="text-sm leading-relaxed text-slate-400">
@@ -346,7 +342,7 @@ export default function RootLayout() {
               </p>
               <Link
                 to={ROUTES.CONTACT}
-                className="inline-flex px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition duration-200 cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                className="inline-flex px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-xs font-bold transition duration-200 cursor-pointer shadow-md shadow-orange-950/20 focus:outline-none"
               >
                 Contact Page
               </Link>

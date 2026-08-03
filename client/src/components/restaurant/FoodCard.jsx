@@ -29,9 +29,9 @@ export default function FoodCard({ item }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex gap-4 sm:gap-6 shadow-xs hover:shadow-md hover:border-slate-300 transition duration-200">
+    <div className="bg-neutral-900/60 rounded-xl border border-white/5 p-4 sm:p-5 flex gap-4 sm:gap-6 shadow-md hover:shadow-lg hover:border-orange-500/30 hover:-translate-y-0.5 transition duration-300 backdrop-blur-md">
       {/* 1:1 Food Image */}
-      <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden bg-slate-100 shrink-0">
+      <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden bg-slate-900 shrink-0">
         <img
           src={image}
           alt={name}
@@ -58,44 +58,44 @@ export default function FoodCard({ item }) {
             <span
               className={`inline-flex items-center justify-center border w-4 h-4 p-0.5 rounded ${
                 isVeg
-                  ? 'border-emerald-500 text-emerald-600 bg-emerald-50'
-                  : 'border-rose-500 text-rose-600 bg-rose-50'
+                  ? 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10'
+                  : 'border-rose-500/30 text-rose-400 bg-rose-500/10'
               }`}
               aria-label={isVeg ? 'Vegetarian' : 'Non-Vegetarian'}
             >
               <span
-                className={`w-1.5 h-1.5 rounded-full ${isVeg ? 'bg-emerald-600' : 'bg-rose-600'}`}
+                className={`w-1.5 h-1.5 rounded-full ${isVeg ? 'bg-emerald-500' : 'bg-rose-500'}`}
               ></span>
             </span>
 
             {/* Popular Badge */}
             {isPopular && (
-              <span className="bg-orange-50 text-orange-700 text-[10px] font-bold px-1.5 py-0.5 rounded-md border border-orange-100 flex items-center gap-0.5 uppercase tracking-wide">
+              <span className="bg-orange-500/10 text-orange-400 text-[10px] font-bold px-1.5 py-0.5 rounded border border-orange-500/20 flex items-center gap-0.5 uppercase tracking-wide">
                 ★ Popular
               </span>
             )}
 
             {/* Rating */}
             {rating && (
-              <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded-md">
+              <span className="text-[10px] font-bold text-slate-300 bg-white/5 px-1.5 py-0.5 rounded">
                 ★ {rating.toFixed(1)}
               </span>
             )}
           </div>
 
-          <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug font-heading">
+          <h4 className="text-sm sm:text-base font-bold text-white leading-snug font-heading">
             {name}
           </h4>
-          <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{description}</p>
+          <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{description}</p>
         </div>
 
         {/* Price & Quantity Selector */}
         <div className="flex items-center justify-between pt-1">
-          <span className="text-sm sm:text-base font-extrabold text-slate-900 font-mono">
+          <span className="text-sm sm:text-base font-extrabold text-orange-400 font-mono">
             {formatCurrency(price)}
           </span>
           {isClosed ? (
-            <span className="text-xs font-bold text-rose-600 bg-rose-50 border border-rose-100 px-3 py-1.5 rounded-xl uppercase tracking-wider select-none">
+            <span className="text-xs font-bold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-3 py-1.5 rounded-lg uppercase tracking-wider select-none">
               Unavailable
             </span>
           ) : (

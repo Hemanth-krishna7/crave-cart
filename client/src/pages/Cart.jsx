@@ -24,12 +24,12 @@ export default function Cart() {
       ) : (
         <div className="space-y-8">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
               Shopping Cart
             </h1>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-slate-400 mt-1">
               You have {totalItems} {totalItems === 1 ? 'item' : 'items'} across{' '}
-              <span className="font-semibold text-slate-800">
+              <span className="font-bold text-white">
                 {groupedRestaurants.length} {groupedRestaurants.length === 1 ? 'restaurant' : 'restaurants'}
               </span>{' '}
               in your cart.

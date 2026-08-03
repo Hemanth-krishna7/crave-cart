@@ -5,10 +5,10 @@ export default function CartItem({ item, onIncrease, onDecrease, onRemove }) {
   const { name, price, quantity, image } = item;
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex items-center justify-between gap-4 shadow-sm">
+    <div className="bg-neutral-900/60 rounded-xl border border-white/5 p-4 sm:p-5 flex items-center justify-between gap-4 shadow-md backdrop-blur-md">
       {/* Left: Image & Name details */}
       <div className="flex items-center gap-4">
-        <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0">
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-slate-900 shrink-0">
           <img
             src={image}
             alt={name}
@@ -20,10 +20,10 @@ export default function CartItem({ item, onIncrease, onDecrease, onRemove }) {
           />
         </div>
         <div>
-          <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug font-heading">
+          <h4 className="text-sm sm:text-base font-bold text-white leading-snug font-heading">
             {name}
           </h4>
-          <p className="text-xs font-semibold text-slate-900 font-mono mt-1">
+          <p className="text-xs font-bold text-orange-400 font-mono mt-1">
             {formatCurrency(price)}
           </p>
         </div>
@@ -31,18 +31,18 @@ export default function CartItem({ item, onIncrease, onDecrease, onRemove }) {
 
       {/* Right: Quantity Toggles & Remove CTA */}
       <div className="flex items-center gap-4 sm:gap-6">
-        <div className="flex items-center border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
+        <div className="flex items-center border border-white/5 rounded-lg bg-white/5 overflow-hidden">
           <button
             onClick={onDecrease}
-            className="px-3 py-1.5 text-slate-500 hover:text-orange-600 hover:bg-slate-100 transition-colors font-bold focus:outline-none"
+            className="px-3 py-1.5 text-slate-400 hover:text-white hover:bg-white/10 transition-colors font-bold focus:outline-none"
             aria-label="Decrease quantity"
           >
             -
           </button>
-          <span className="px-3 py-1 text-sm font-bold text-slate-800 font-mono">{quantity}</span>
+          <span className="px-3 py-1 text-sm font-bold text-slate-200 font-mono">{quantity}</span>
           <button
             onClick={onIncrease}
-            className="px-3 py-1.5 text-slate-500 hover:text-orange-600 hover:bg-slate-100 transition-colors font-bold focus:outline-none"
+            className="px-3 py-1.5 text-slate-400 hover:text-white hover:bg-white/10 transition-colors font-bold focus:outline-none"
             aria-label="Increase quantity"
           >
             +
@@ -52,7 +52,7 @@ export default function CartItem({ item, onIncrease, onDecrease, onRemove }) {
         {/* Remove Trash Button */}
         <button
           onClick={onRemove}
-          className="p-2 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-all focus:outline-none"
+          className="p-2 rounded-lg text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 transition-all focus:outline-none"
           aria-label="Remove item"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

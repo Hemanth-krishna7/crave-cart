@@ -25,10 +25,10 @@ function ReviewOrderButton() {
     <button
       type="submit"
       disabled={!isValid}
-      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${
+      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold shadow-md transition duration-200 focus:outline-none ${
         isValid
-          ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer'
-          : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+          ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer shadow-orange-950/20'
+          : 'bg-neutral-800 text-slate-500 border border-white/5 cursor-not-allowed'
       }`}
     >
       Review Order
@@ -136,24 +136,24 @@ export default function Checkout() {
   if (closedGroup) {
     return (
       <PageWrapper title="Ordering Unavailable" className="pb-16" containerClassName="max-w-xl">
-        <div className="text-center py-16 space-y-6">
-          <div className="w-20 h-20 mx-auto rounded-full bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-500 shadow-sm text-3xl">
+        <div className="text-center py-16 bg-neutral-900/60 border border-white/5 rounded-xl p-8 shadow-lg backdrop-blur-md space-y-6">
+          <div className="w-20 h-20 mx-auto rounded-full bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 shadow-sm text-3xl">
             🔒
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-slate-800 font-heading">
+            <h2 className="text-2xl font-bold text-white font-heading">
               Ordering Unavailable
             </h2>
-            <p className="text-sm text-slate-500 leading-relaxed max-w-sm mx-auto">
-              <span className="font-semibold text-slate-800">&ldquo;{closedGroup.restaurantName}&rdquo;</span> is currently closed and not accepting orders.
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm mx-auto">
+              <span className="font-bold text-white">&ldquo;{closedGroup.restaurantName}&rdquo;</span> is currently closed and not accepting orders.
             </p>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500">
               Ordering will become available once the restaurant reopens.
             </p>
           </div>
           <Link
             to={ROUTES.RESTAURANTS}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
           >
             Browse Restaurants
           </Link>
@@ -167,12 +167,12 @@ export default function Checkout() {
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(handleReviewOrder)} className="space-y-8">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
               Checkout
             </h1>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-slate-400 mt-1">
               Reviewing order for{' '}
-              <span className="font-semibold text-orange-605 text-orange-600">
+              <span className="font-semibold text-orange-400">
                 {activeModeText}
               </span>
             </p>
@@ -191,8 +191,8 @@ export default function Checkout() {
               <PaymentMethodSelector />
 
               {/* Order Items */}
-              <div className="space-y-4 pt-4 border-t border-slate-100">
-                <h3 className="text-lg font-bold text-slate-800 font-heading">Review items</h3>
+              <div className="space-y-4 pt-4 border-t border-white/5">
+                <h3 className="text-lg font-bold text-white font-heading">Review items</h3>
                 {checkoutGroups.map((group) => (
                   <CheckoutRestaurantSection
                     key={group.restaurantId}

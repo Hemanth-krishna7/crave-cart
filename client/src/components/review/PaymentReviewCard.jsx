@@ -11,8 +11,8 @@ export default function PaymentReviewCard({ paymentMethod }) {
           {method?.icon || '💳'}
         </span>
         <div>
-          <p className="text-sm font-bold text-slate-800">{method?.label || 'Payment Method'}</p>
-          <p className="text-xs text-slate-500 mt-0.5">{method?.description || ''}</p>
+          <p className="text-sm font-bold text-white">{method?.label || 'Payment Method'}</p>
+          <p className="text-xs text-slate-400 mt-0.5">{method?.description || ''}</p>
         </div>
       </div>
     </ReviewSection>

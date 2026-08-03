@@ -14,8 +14,8 @@ export default function Orders() {
   if (orders.length === 0) {
     return (
       <PageWrapper title="My Orders" className="pb-16">
-        <div className="max-w-md mx-auto text-center py-16 space-y-6">
-          <div className="w-20 h-20 mx-auto rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 shadow-sm">
+        <div className="max-w-md mx-auto text-center py-16 bg-neutral-900/60 border border-white/5 rounded-xl p-8 shadow-lg backdrop-blur-md space-y-6">
+          <div className="w-20 h-20 mx-auto rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-slate-400 shadow-sm">
             <svg
               className="w-10 h-10 stroke-[1.5]"
               fill="none"
@@ -31,14 +31,14 @@ export default function Orders() {
             </svg>
           </div>
           <div className="space-y-2">
-            <h2 className="text-xl font-bold text-slate-800 font-heading">No Orders Placed Yet</h2>
-            <p className="text-sm text-slate-500 leading-relaxed max-w-sm mx-auto">
+            <h2 className="text-xl font-bold text-white font-heading">No Orders Placed Yet</h2>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm mx-auto">
               Start exploring local restaurants to place your first order and satisfy your cravings!
             </p>
           </div>
           <Link
             to={ROUTES.HOME}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
           >
             Start Ordering
           </Link>
@@ -51,10 +51,10 @@ export default function Orders() {
     <PageWrapper title="My Orders" className="pb-16" containerClassName="max-w-4xl">
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
             My Orders
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             View your order history and estimated delivery times
           </p>
         </div>

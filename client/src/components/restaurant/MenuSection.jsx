@@ -6,8 +6,8 @@ export default function MenuSection({ categoryTitle, items }) {
   return (
     <div className="space-y-4">
       {/* Category Heading */}
-      <div className="border-b border-slate-100 pb-2">
-        <h3 className="text-lg sm:text-xl font-bold text-slate-800 font-heading">
+      <div className="border-b border-white/5 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-white font-heading">
           {categoryTitle}
           <span className="ml-2 text-xs font-semibold text-slate-400">
             ({items.length})

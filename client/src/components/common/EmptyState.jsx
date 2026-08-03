@@ -22,21 +22,21 @@ export default function EmptyState({
           </svg>
         )}
       </div>
-      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-      <p className="mt-2 text-sm text-slate-500">{description}</p>
+      <h3 className="text-lg font-bold text-white font-heading">{title}</h3>
+      <p className="mt-2 text-sm text-slate-400">{description}</p>
       {actionLabel && (actionTo || onActionClick) && (
         <div className="mt-6">
           {actionTo ? (
             <Link
               to={actionTo}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none transition"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
             >
               {actionLabel}
             </Link>
           ) : (
             <button
               onClick={onActionClick}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none transition"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
             >
               {actionLabel}
             </button>

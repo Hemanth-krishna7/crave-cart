@@ -91,12 +91,12 @@ export default function OrderReview() {
     <PageWrapper title="Order Review" className="pb-16" containerClassName="max-w-7xl">
       <div className="space-y-8">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
             Order Review
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             Verifying details for{' '}
-            <span className="font-semibold text-orange-600">{activeModeText}</span>
+            <span className="font-semibold text-orange-400">{activeModeText}</span>
           </p>
         </div>
 
@@ -113,8 +113,8 @@ export default function OrderReview() {
             <PaymentReviewCard paymentMethod={formData.paymentMethod} />
 
             {/* Read-only items lists */}
-            <div className="space-y-4 pt-4 border-t border-slate-100">
-              <h3 className="text-lg font-bold text-slate-800 font-heading font-heading">Items</h3>
+            <div className="space-y-4 pt-4 border-t border-white/5">
+              <h3 className="text-lg font-bold text-white font-heading">Items</h3>
               {groupedRestaurants.map((group) => (
                 <CheckoutRestaurantSection
                   key={group.restaurantId}
@@ -135,7 +135,7 @@ export default function OrderReview() {
               <div className="space-y-4">
                 {/* Contextual Availability Warning */}
                 {!canPlace && (
-                  <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 text-xs text-rose-800 space-y-1">
+                  <div className="bg-rose-500/10 border border-rose-500/20 rounded-xl p-4 text-xs text-rose-400 space-y-1">
                     <p className="font-bold flex items-center gap-1.5">
                       <span>⚠️</span> Ordering Currently Closed
                     </p>
@@ -148,10 +148,10 @@ export default function OrderReview() {
                 <button
                   onClick={handlePlaceOrder}
                   disabled={!canPlace}
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold shadow-md transition duration-200 focus:outline-none ${
                     canPlace
-                      ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer'
-                      : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                      ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer shadow-orange-950/20'
+                      : 'bg-neutral-800 text-slate-500 border border-white/5 cursor-not-allowed'
                   }`}
                 >
                   Place Order

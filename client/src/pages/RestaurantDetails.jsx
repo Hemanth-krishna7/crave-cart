@@ -57,7 +57,7 @@ export default function RestaurantDetails() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Menu Sections (Left column, occupies 2/3 on desktop) */}
           <div className="lg:col-span-2 space-y-12">
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight font-heading border-b border-slate-200 pb-3">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-heading border-b border-white/5 pb-3">
               Menu Categories
             </h2>
             <div className="space-y-10">
