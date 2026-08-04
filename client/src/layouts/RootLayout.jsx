@@ -13,8 +13,8 @@ export default function RootLayout() {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const isDiscovery = location.pathname === ROUTES.RESTAURANTS;
-  const isDarkEnv = true;
   const isHeaderDark = true;
+  const isUtility = !isHome && !isDiscovery;
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -40,7 +40,7 @@ export default function RootLayout() {
               ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
               : isDiscovery
                 ? 'filter brightness-[0.48] contrast-[1.02] opacity-[0.24] blur-[1px]'
-                : 'filter brightness-[0.25] contrast-[1.0] opacity-[0.08] blur-[2px]'
+                : 'filter brightness-[0.40] contrast-[1.02] opacity-[0.16] blur-[1px]'
           }`}
         />
       </div>
@@ -69,13 +69,28 @@ export default function RootLayout() {
         {/* Layer 4: Subtle Warm Orange Glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,88,12,0.11)_0%,rgba(0,0,0,0)_50%)]" />
       </div>
-      {/* Default Overlay */}
+      {/* Default (Utility) Overlay Layers */}
       <div 
         className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
-          (!isHome && !isDiscovery) ? 'opacity-100' : 'opacity-0'
-        } bg-gradient-to-br from-[#0c0c0c] via-[#0e0d0c] to-[#0a0a09]`}
+          isUtility ? 'opacity-100' : 'opacity-0'
+        }`}
         aria-hidden="true"
-      />
+      >
+        {/* Layer C1: Warm Charcoal Foundation */}
+        <div className="absolute inset-0 bg-[#0c0c0c]" />
+        
+        {/* Layer C2: Vignette / Ambient Occlusion */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(12,12,12,0.95)_98%)]" />
+        
+        {/* Layer C3: Faint Warm Glows */}
+        {/* Glow 1: Upper Right */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(234,88,12,0.12)_0%,rgba(0,0,0,0)_60%)]" />
+        {/* Glow 2: Lower Left */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_85%,rgba(217,119,6,0.06)_0%,rgba(0,0,0,0)_50%)]" />
+
+        {/* Layer C4: Subtle Top-to-Bottom gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c0c]/10 via-[#0e0d0c]/70 to-[#0e0d0c]" />
+      </div>
 
       {/* Layer 3: Application UI Container */}
       <div className="relative z-10 flex flex-col min-h-screen">
@@ -258,7 +273,9 @@ export default function RootLayout() {
       </header>
 
       {/* Main Page Layout Wrapper */}
-      <main className="flex-grow">
+      <main className={`flex-grow relative z-10 ${
+        isUtility ? 'bg-gradient-to-b from-transparent via-[#0e0d0c]/40 to-[#0c0c0c]' : ''
+      }`}>
         <Outlet />
       </main>
 
