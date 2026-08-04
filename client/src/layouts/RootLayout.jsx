@@ -39,8 +39,8 @@ export default function RootLayout() {
             isHome 
               ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
               : isDiscovery
-                ? 'filter brightness-[0.48] contrast-[1.02] opacity-[0.24] blur-[1px]'
-                : 'filter brightness-[0.40] contrast-[1.02] opacity-[0.16] blur-[1px]'
+                ? 'filter brightness-[0.55] contrast-[1.05] opacity-[0.32] blur-[0.5px]'
+                : 'filter brightness-[0.52] contrast-[1.05] opacity-[0.28] blur-[0.8px]'
           }`}
         />
       </div>
@@ -60,14 +60,14 @@ export default function RootLayout() {
         }`}
         aria-hidden="true"
       >
-        {/* Layer 3a: Vertical Dark Fade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#0e0d0c]/40 to-[#0e0d0c]" />
+        {/* Layer 3a: Asymmetric/Readability Dark Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
         
         {/* Layer 3b: Radial Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_30%,rgba(14,13,12,0.9)_95%)]" />
-        
-        {/* Layer 4: Subtle Warm Orange Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,88,12,0.11)_0%,rgba(0,0,0,0)_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(11,11,11,0.92)_98%)]" />
+
+        {/* Layer 3c: Top-to-Bottom Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/30" />
       </div>
       {/* Default (Utility) Overlay Layers */}
       <div 
@@ -77,19 +77,16 @@ export default function RootLayout() {
         aria-hidden="true"
       >
         {/* Layer C1: Warm Charcoal Foundation */}
-        <div className="absolute inset-0 bg-[#0c0c0c]" />
+        <div className="absolute inset-0 bg-[#0d0d0c]" />
         
         {/* Layer C2: Vignette / Ambient Occlusion */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(12,12,12,0.95)_98%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_45%,rgba(11,11,11,0.92)_98%)]" />
         
-        {/* Layer C3: Faint Warm Glows */}
-        {/* Glow 1: Upper Right */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(234,88,12,0.12)_0%,rgba(0,0,0,0)_60%)]" />
-        {/* Glow 2: Lower Left */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_85%,rgba(217,119,6,0.06)_0%,rgba(0,0,0,0)_50%)]" />
+        {/* Layer C3: Asymmetric/Readability Dark Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
 
-        {/* Layer C4: Subtle Top-to-Bottom gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c0c]/10 via-[#0e0d0c]/70 to-[#0e0d0c]" />
+        {/* Layer C4: Top-to-Bottom Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/40" />
       </div>
 
       {/* Layer 3: Application UI Container */}
@@ -273,9 +270,7 @@ export default function RootLayout() {
       </header>
 
       {/* Main Page Layout Wrapper */}
-      <main className={`flex-grow relative z-10 ${
-        isUtility ? 'bg-gradient-to-b from-transparent via-[#0e0d0c]/40 to-[#0c0c0c]' : ''
-      }`}>
+      <main className="flex-grow relative z-10">
         <Outlet />
       </main>
 
