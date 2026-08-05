@@ -15,6 +15,7 @@ import { APP_CONFIG } from '@/constants/app';
 import { checkoutSchema } from '@/validations/checkoutSchema';
 import { ROUTES } from '@/constants/routes';
 import { canPlaceOrder } from '@/services/availabilityService';
+import { formatCurrency } from '@/utils';
 
 function ReviewOrderButton() {
   const {
@@ -157,6 +158,116 @@ export default function Checkout() {
           >
             Browse Restaurants
           </Link>
+        </div>
+      </PageWrapper>
+    );
+  }
+
+  // 2. Validate minimum order requirements for all participating restaurants in this checkout session
+  const validations = checkoutGroups.map((group) => {
+    const restaurant = RESTAURANTS.find((r) => r.id === group.restaurantId) || null;
+    const minOrder = restaurant?.minOrder || 0;
+    const groupSubtotal = group.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const meetsMinimum = groupSubtotal >= minOrder;
+    const remainingAmount = meetsMinimum ? 0 : Math.max(0, minOrder - groupSubtotal);
+    return {
+      restaurantId: group.restaurantId,
+      restaurantName: group.restaurantName,
+      subtotal: groupSubtotal,
+      minOrder,
+      meetsMinimum,
+      remainingAmount,
+    };
+  });
+
+  const failingValidations = validations.filter((v) => !v.meetsMinimum);
+
+  if (failingValidations.length === 1) {
+    const fail = failingValidations[0];
+    return (
+      <PageWrapper title="Minimum Order Requirement" className="pb-16" containerClassName="max-w-xl">
+        <div className="text-center py-16 bg-neutral-900/60 border border-white/5 rounded-xl p-8 shadow-lg backdrop-blur-md space-y-6">
+          <div className="w-20 h-20 mx-auto rounded-full bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 shadow-sm text-3xl">
+            🛍️
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold text-white font-heading">
+              Minimum Order Not Reached
+            </h2>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm mx-auto">
+              Minimum order not reached for <span className="font-bold text-white">&ldquo;{fail.restaurantName}&rdquo;</span>.
+            </p>
+            <div className="bg-white/5 rounded-lg p-4 border border-white/5 max-w-xs mx-auto space-y-1.5 text-xs text-slate-350 font-mono">
+              <div className="flex justify-between">
+                <span>Current Subtotal:</span>
+                <span className="text-white font-bold">{formatCurrency(fail.subtotal)}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Minimum Order:</span>
+                <span className="text-white font-bold">{formatCurrency(fail.minOrder)}</span>
+              </div>
+              <div className="flex justify-between text-orange-400 font-bold border-t border-white/5 pt-1.5">
+                <span>Add More:</span>
+                <span>{formatCurrency(fail.remainingAmount)}</span>
+              </div>
+            </div>
+            <p className="text-xs text-slate-500">
+              Add {formatCurrency(fail.remainingAmount)} more to continue.
+            </p>
+          </div>
+          <Link
+            to={ROUTES.RESTAURANT_DETAIL.replace(':id', fail.restaurantId)}
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
+          >
+            Add More Items
+          </Link>
+        </div>
+      </PageWrapper>
+    );
+  }
+
+  if (failingValidations.length > 1) {
+    return (
+      <PageWrapper title="Minimum Order Requirements" className="pb-16" containerClassName="max-w-2xl">
+        <div className="bg-neutral-900/60 border border-white/5 rounded-xl p-6 sm:p-8 shadow-lg backdrop-blur-md space-y-6">
+          <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+            <div className="w-12 h-12 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-450 text-2xl shrink-0">
+              ⚠️
+            </div>
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-white font-heading">
+                Minimum Order Requirements
+              </h2>
+              <p className="text-sm text-slate-400 mt-1">
+                Some restaurants in your cart haven&apos;t reached their minimum order value. Add more items from the restaurants below before continuing.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {failingValidations.map((fail) => (
+              <div key={fail.restaurantId} className="flex flex-wrap items-center justify-between gap-4 p-4 bg-white/5 border border-white/5 rounded-lg">
+                <div className="space-y-1">
+                  <h4 className="text-sm sm:text-base font-bold text-white font-heading">
+                    {fail.restaurantName}
+                  </h4>
+                  <div className="flex gap-4 text-xs font-mono text-slate-400">
+                    <span>Current: <strong className="text-slate-200">{formatCurrency(fail.subtotal)}</strong></span>
+                    <span>Minimum: <strong className="text-slate-200">{formatCurrency(fail.minOrder)}</strong></span>
+                  </div>
+                  <p className="text-xs text-orange-450 font-bold">
+                    Add {formatCurrency(fail.remainingAmount)} more
+                  </p>
+                </div>
+                <Link
+                  to={ROUTES.RESTAURANT_DETAIL.replace(':id', fail.restaurantId)}
+                  className="px-4 py-2 text-xs font-bold rounded-lg bg-orange-600 hover:bg-orange-700 text-white shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
+                >
+                  View Restaurant
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </PageWrapper>
     );

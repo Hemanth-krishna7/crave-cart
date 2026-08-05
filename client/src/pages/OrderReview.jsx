@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation, Navigate } from 'react-router-dom';
+import { useNavigate, useLocation, Navigate, Link } from 'react-router-dom';
 import PageWrapper from '@/components/common/PageWrapper';
 import CheckoutRestaurantSection from '@/components/checkout/CheckoutRestaurantSection';
 import CheckoutSummary from '@/components/checkout/CheckoutSummary';
@@ -12,6 +12,7 @@ import { placeOrder } from '@/services/orderService';
 import { APP_CONFIG } from '@/constants/app';
 import { ROUTES } from '@/constants/routes';
 import { getRestaurantAvailabilityById } from '@/services/availabilityService';
+import { formatCurrency } from '@/utils';
 
 export default function OrderReview() {
   const navigate = useNavigate();
@@ -53,6 +54,25 @@ export default function OrderReview() {
   // Group items using the shared utility helper
   const groupedRestaurants = groupCartItemsByRestaurant(initialItems);
 
+  // Validate minimum order requirements
+  const validations = groupedRestaurants.map((group) => {
+    const minOrder = group.restaurant?.minOrder || 0;
+    const groupSubtotal = group.items.reduce((sum, item) => sum + item.quantity * item.price, 0);
+    const meetsMinimum = groupSubtotal >= minOrder;
+    const remainingAmount = meetsMinimum ? 0 : Math.max(0, minOrder - groupSubtotal);
+    return {
+      restaurantId: group.restaurantId,
+      restaurantName: group.restaurant ? group.restaurant.name : 'Restaurant',
+      subtotal: groupSubtotal,
+      minOrder,
+      meetsMinimum,
+      remainingAmount,
+    };
+  });
+
+  const failingValidations = validations.filter((v) => !v.meetsMinimum);
+  const allMeetMinimum = failingValidations.length === 0;
+
   const activeModeText = restaurantId
     ? (groupedRestaurants[0]?.restaurant?.name || 'Restaurant')
     : `${groupedRestaurants.length} ${groupedRestaurants.length === 1 ? 'Restaurant' : 'Restaurants'}`;
@@ -66,6 +86,10 @@ export default function OrderReview() {
   };
 
   const handlePlaceOrder = () => {
+    if (!allMeetMinimum) {
+      alert('One or more restaurants in your order do not meet the minimum order requirement.');
+      return;
+    }
     try {
       const order = placeOrder({
         cartItems,
@@ -145,11 +169,41 @@ export default function OrderReview() {
                   </div>
                 )}
 
+                {/* Contextual Minimum Order Warning */}
+                {!allMeetMinimum && (
+                  <div className="bg-rose-500/10 border border-rose-500/20 rounded-xl p-4 text-xs text-rose-400 space-y-3">
+                    <p className="font-bold flex items-center gap-1.5 text-sm">
+                      <span>⚠️</span> Minimum Order Requirements
+                    </p>
+                    <p className="leading-relaxed">
+                      Some restaurants in your order haven&apos;t met their minimum order requirements. Please add more items before placing the order.
+                    </p>
+                    <div className="space-y-2 border-t border-rose-500/10 pt-2 font-sans">
+                      {failingValidations.map((fail) => (
+                        <div key={fail.restaurantId} className="flex justify-between items-center gap-2">
+                          <div className="space-y-0.5">
+                            <p className="font-bold text-white text-[11px]">{fail.restaurantName}</p>
+                            <p className="text-[10px] text-slate-400 font-mono">
+                              Current: {formatCurrency(fail.subtotal)} / Min: {formatCurrency(fail.minOrder)}
+                            </p>
+                          </div>
+                          <Link
+                            to={ROUTES.RESTAURANT_DETAIL.replace(':id', fail.restaurantId)}
+                            className="px-2.5 py-1 text-[10px] font-bold rounded bg-orange-600 hover:bg-orange-700 text-white shadow-sm transition shrink-0"
+                          >
+                            View
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <button
                   onClick={handlePlaceOrder}
-                  disabled={!canPlace}
+                  disabled={!canPlace || !allMeetMinimum}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold shadow-md transition duration-200 focus:outline-none ${
-                    canPlace
+                    (canPlace && allMeetMinimum)
                       ? 'bg-orange-600 hover:bg-orange-700 text-white cursor-pointer shadow-orange-950/20'
                       : 'bg-neutral-800 text-slate-500 border border-white/5 cursor-not-allowed'
                   }`}

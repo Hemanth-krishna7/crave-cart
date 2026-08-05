@@ -3,7 +3,7 @@ import { formatCurrency } from '@/utils';
 import { ROUTES } from '@/constants/routes';
 import { APP_CONFIG } from '@/constants/app';
 
-export default function CartSummary({ subtotal }) {
+export default function CartSummary({ subtotal, allMeetMinimum = true }) {
   const deliveryFee = APP_CONFIG.DELIVERY_FEE;
   const grandTotal = subtotal + deliveryFee;
 
@@ -38,12 +38,26 @@ export default function CartSummary({ subtotal }) {
       </div>
 
       {/* Action Button */}
-      <Link
-        to={ROUTES.CHECKOUT}
-        className="w-full inline-flex items-center justify-center px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
-      >
-        Checkout All Restaurants
-      </Link>
+      {allMeetMinimum ? (
+        <Link
+          to={ROUTES.CHECKOUT}
+          className="w-full inline-flex items-center justify-center px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none text-center"
+        >
+          Checkout All Restaurants
+        </Link>
+      ) : (
+        <div className="space-y-2">
+          <button
+            disabled
+            className="w-full inline-flex items-center justify-center px-6 py-3 rounded-lg bg-neutral-800 text-slate-500 border border-white/5 font-bold cursor-not-allowed text-center"
+          >
+            Checkout All Restaurants
+          </button>
+          <p className="text-[11px] text-orange-450 leading-normal text-center font-medium">
+            Please satisfy the minimum order requirement for all restaurants in your cart to proceed.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import RestaurantCartSection from '@/components/cart/RestaurantCartSection';
 import CartSummary from '@/components/cart/CartSummary';
 import EmptyCart from '@/components/cart/EmptyCart';
 import { useCartStore, selectSubtotal, selectTotalItems } from '@/store/cartStore';
-import { groupCartItemsByRestaurant } from '@/utils/cartHelpers';
+import { groupCartItemsByRestaurant, validateMinimumOrder } from '@/utils/cartHelpers';
 
 export default function Cart() {
   const cartItems = useCartStore((state) => state.cartItems);
@@ -16,6 +16,9 @@ export default function Cart() {
 
   // Group items in a single pass using the shared helper
   const groupedRestaurants = groupCartItemsByRestaurant(cartItems);
+
+  // Perform minimum order validation
+  const { validations, allMeetMinimum } = validateMinimumOrder(cartItems);
 
   return (
     <PageWrapper title="My Cart" className="pb-16" containerClassName="max-w-7xl">
@@ -41,6 +44,11 @@ export default function Cart() {
             <div className="lg:col-span-2 space-y-6">
               {groupedRestaurants.map((group) => {
                 const restaurantName = group.restaurant ? group.restaurant.name : 'Restaurant';
+                const validation = validations.find((v) => v.restaurantId === group.restaurantId);
+                const meetsMinimum = validation ? validation.meetsMinimum : true;
+                const minOrder = validation ? validation.minOrder : 0;
+                const remainingAmount = validation ? validation.remainingAmount : 0;
+
                 return (
                   <RestaurantCartSection
                     key={group.restaurantId}
@@ -51,6 +59,9 @@ export default function Cart() {
                     onIncrease={increaseQuantity}
                     onDecrease={decreaseQuantity}
                     onRemove={removeItem}
+                    meetsMinimum={meetsMinimum}
+                    minOrder={minOrder}
+                    remainingAmount={remainingAmount}
                   />
                 );
               })}
@@ -58,7 +69,7 @@ export default function Cart() {
 
             {/* Right Summary Panel (1/3 of grid) */}
             <div className="lg:sticky lg:top-24">
-              <CartSummary subtotal={subtotal} />
+              <CartSummary subtotal={subtotal} allMeetMinimum={allMeetMinimum} />
             </div>
           </div>
         </div>

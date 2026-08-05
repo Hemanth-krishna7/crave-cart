@@ -34,6 +34,19 @@ export function placeOrder({ cartItems, formData, restaurantId, pricing }) {
     }
   }
 
+  // 1.6 Enforce business validation of minimum order requirements
+  for (const id of uniqueRestaurantIds) {
+    const restaurant = RESTAURANTS.find((r) => r.id === id);
+    const minOrder = restaurant?.minOrder || 0;
+    const restaurantSubtotal = purchasedItems
+      .filter((item) => item.restaurantId === id)
+      .reduce((sum, item) => sum + item.quantity * item.price, 0);
+
+    if (restaurantSubtotal < minOrder) {
+      throw new Error(`Cannot place order: Subtotal for "${restaurant?.name || 'restaurant'}" is below the minimum order of ₹${minOrder}.`);
+    }
+  }
+
   // 2. Generate temporary order reference
   const orderReference = generateOrderReference();
 

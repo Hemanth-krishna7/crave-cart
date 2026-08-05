@@ -14,6 +14,16 @@ export default function RootLayout() {
   const isHome = location.pathname === '/';
   const isHeaderDark = true;
 
+  const handleNavClick = (e, path) => {
+    if (location.pathname === path) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
     { label: 'Restaurants', path: ROUTES.RESTAURANTS },
@@ -69,7 +79,7 @@ export default function RootLayout() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center gap-8">
-              <Link to={ROUTES.HOME} className="flex items-center gap-2">
+              <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={(e) => handleNavClick(e, ROUTES.HOME)}>
                 <span className={`text-2xl font-extrabold tracking-tight ${
                   isHeaderDark 
                     ? 'text-white' 
@@ -85,6 +95,7 @@ export default function RootLayout() {
                   <NavLink
                     key={link.path}
                     to={link.path}
+                    onClick={(e) => handleNavClick(e, link.path)}
                     className={({ isActive }) =>
                       `px-3 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center ${
                         isActive
@@ -115,6 +126,7 @@ export default function RootLayout() {
               {/* Cart Button */}
               <Link
                 to={ROUTES.CART}
+                onClick={(e) => handleNavClick(e, ROUTES.CART)}
                 className={`relative p-2 rounded-lg transition-colors ${
                   isHeaderDark 
                     ? 'text-slate-300 hover:text-white hover:bg-white/5' 
@@ -143,6 +155,7 @@ export default function RootLayout() {
               {/* Mobile Cart Shortcut */}
               <Link
                 to={ROUTES.CART}
+                onClick={(e) => handleNavClick(e, ROUTES.CART)}
                 className={`relative p-2 mr-2 rounded-lg ${
                   isHeaderDark 
                     ? 'text-slate-300 hover:text-white' 
@@ -210,7 +223,10 @@ export default function RootLayout() {
               <NavLink
                 key={link.path}
                 to={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setIsMobileMenuOpen(false);
+                  handleNavClick(e, link.path);
+                }}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg text-base font-medium transition-colors flex items-center justify-between ${
                     isActive
@@ -265,22 +281,22 @@ export default function RootLayout() {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to={ROUTES.HOME} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.HOME} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.HOME)}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.RESTAURANTS} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.RESTAURANTS} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.RESTAURANTS)}>
                     Browse Restaurants
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.ABOUT} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.ABOUT} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.ABOUT)}>
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.CONTACT} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.CONTACT} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.CONTACT)}>
                     Contact Us
                   </Link>
                 </li>
@@ -294,17 +310,17 @@ export default function RootLayout() {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to={ROUTES.CART} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.CART} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.CART)}>
                     My Cart
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.TERMS} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.TERMS} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.TERMS)}>
                     Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTES.PRIVACY} className="hover:text-white transition-colors">
+                  <Link to={ROUTES.PRIVACY} className="hover:text-white transition-colors" onClick={(e) => handleNavClick(e, ROUTES.PRIVACY)}>
                     Privacy Policy
                   </Link>
                 </li>
@@ -322,6 +338,7 @@ export default function RootLayout() {
               </p>
               <Link
                 to={ROUTES.CONTACT}
+                onClick={(e) => handleNavClick(e, ROUTES.CONTACT)}
                 className="inline-flex px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-xs font-bold transition duration-200 cursor-pointer shadow-md shadow-orange-950/20 focus:outline-none"
               >
                 Contact Page

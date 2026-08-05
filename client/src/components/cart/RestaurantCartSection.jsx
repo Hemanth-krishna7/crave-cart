@@ -11,6 +11,9 @@ export default function RestaurantCartSection({
   onIncrease,
   onDecrease,
   onRemove,
+  meetsMinimum = true,
+  minOrder = 0,
+  remainingAmount = 0,
 }) {
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -59,18 +62,44 @@ export default function RestaurantCartSection({
         ))}
       </div>
 
+      {/* Minimum order requirement warning banner */}
+      {!meetsMinimum && (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-orange-950/10 border border-orange-500/15 rounded-xl text-xs text-slate-350">
+          <div className="space-y-1">
+            <p className="font-extrabold text-orange-450 flex items-center gap-1.5 text-[13px]">
+              <span>⚠️</span> Minimum Order Value Required
+            </p>
+            <p className="leading-relaxed">
+              Minimum order for {restaurantName} is <strong className="text-white font-mono">{formatCurrency(minOrder)}</strong>. Current subtotal is <strong className="text-white font-mono">{formatCurrency(subtotal)}</strong>.
+            </p>
+          </div>
+          <div className="shrink-0 font-extrabold text-orange-450">
+            Add {formatCurrency(remainingAmount)} more to order
+          </div>
+        </div>
+      )}
+
       {/* Restaurant Subtotal and checkout CTA */}
       <div className="flex flex-wrap items-center justify-between pt-4 border-t border-white/5 gap-3">
         <div className="text-sm font-semibold text-slate-400">
           <span>Restaurant Subtotal: </span>
           <span className="font-bold text-white font-mono text-base">{formatCurrency(subtotal)}</span>
         </div>
-        <Link
-          to={ROUTES.CHECKOUT_RESTAURANT.replace(':restaurantId', restaurantId)}
-          className="px-4 py-2 text-xs font-bold rounded-lg bg-orange-600 hover:bg-orange-700 text-white shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
-        >
-          Checkout Restaurant
-        </Link>
+        {meetsMinimum ? (
+          <Link
+            to={ROUTES.CHECKOUT_RESTAURANT.replace(':restaurantId', restaurantId)}
+            className="px-4 py-2 text-xs font-bold rounded-lg bg-orange-600 hover:bg-orange-700 text-white shadow-md shadow-orange-950/20 transition duration-200 focus:outline-none"
+          >
+            Checkout Restaurant
+          </Link>
+        ) : (
+          <Link
+            to={ROUTES.RESTAURANT_DETAIL.replace(':id', restaurantId)}
+            className="px-4 py-2 text-xs font-bold rounded-lg border border-orange-650/30 text-orange-450 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition duration-200 focus:outline-none"
+          >
+            Add More Items
+          </Link>
+        )}
       </div>
     </div>
   );
