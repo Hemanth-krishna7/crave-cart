@@ -12,9 +12,7 @@ export default function RootLayout() {
   const totalFavorites = useFavoritesStore(selectTotalFavoriteCount);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isDiscovery = location.pathname === ROUTES.RESTAURANTS;
   const isHeaderDark = true;
-  const isUtility = !isHome && !isDiscovery;
 
   const navLinks = [
     { label: 'Home', path: ROUTES.HOME },
@@ -38,9 +36,7 @@ export default function RootLayout() {
           className={`w-full h-full object-cover object-center scale-102 transition-all duration-750 ${
             isHome 
               ? 'filter brightness-[0.7] contrast-[1.05] opacity-[0.80] blur-[0.3px]' 
-              : isDiscovery
-                ? 'filter brightness-[0.55] contrast-[1.05] opacity-[0.32] blur-[0.5px]'
-                : 'filter brightness-[0.52] contrast-[1.05] opacity-[0.28] blur-[0.8px]'
+              : 'filter brightness-[0.62] contrast-[1.04] opacity-[0.42] blur-[0.3px]'
           }`}
         />
       </div>
@@ -53,41 +49,13 @@ export default function RootLayout() {
         } bg-gradient-to-r from-black via-black/75 to-transparent`}
         aria-hidden="true"
       />
-      {/* Discovery Overlay Layers */}
+      {/* Non-Home Overlay Layer */}
       <div 
         className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
-          isDiscovery ? 'opacity-100' : 'opacity-0'
-        }`}
+          !isHome ? 'opacity-100' : 'opacity-0'
+        } bg-black/40`}
         aria-hidden="true"
-      >
-        {/* Layer 3a: Asymmetric/Readability Dark Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
-        
-        {/* Layer 3b: Radial Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(11,11,11,0.92)_98%)]" />
-
-        {/* Layer 3c: Top-to-Bottom Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/30" />
-      </div>
-      {/* Default (Utility) Overlay Layers */}
-      <div 
-        className={`fixed inset-0 z-0 pointer-events-none transition-opacity duration-750 ${
-          isUtility ? 'opacity-100' : 'opacity-0'
-        }`}
-        aria-hidden="true"
-      >
-        {/* Layer C1: Warm Charcoal Foundation */}
-        <div className="absolute inset-0 bg-[#0d0d0c]" />
-        
-        {/* Layer C2: Vignette / Ambient Occlusion */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_45%,rgba(11,11,11,0.92)_98%)]" />
-        
-        {/* Layer C3: Asymmetric/Readability Dark Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
-
-        {/* Layer C4: Top-to-Bottom Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/40" />
-      </div>
+      />
 
       {/* Layer 3: Application UI Container */}
       <div className="relative z-10 flex flex-col min-h-screen">
