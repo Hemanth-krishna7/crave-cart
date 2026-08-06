@@ -961,7 +961,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.w3Ogo96oBc8BK5IL_rmHaQHaFL?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-2',
@@ -976,7 +976,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.i2xtmdnPVJG26H_qgM9wDwHaJ4?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-3',
@@ -991,7 +991,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.hrPFec5eBQvQJzlkZVT71AHaGN?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-4',
@@ -1006,7 +1006,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.3,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.F_vY-ZX09EpA0i0e4a4JigHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-5',
@@ -1021,7 +1021,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.ukf9itLTuVLaEx3neD0-PAHaE7?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-6',
@@ -1036,7 +1036,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.AA-6qNmewFkgnTq2Lj74CgHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-7',
@@ -1051,7 +1051,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.6,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.VldHI8AZTygskKGAN3UZ2AHaE6?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-8',
@@ -1066,7 +1066,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.8,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.T2DVcYKRDH35Mo2XAdtbTQHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-9',
@@ -1081,7 +1081,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.4,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP._wyVeq6N7Z8iySggb6d1mwHaJN?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-7-10',
@@ -1096,7 +1096,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Mexican',
-      image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.KVAP5hatMTRLGSdu-ei-OAHaHa?r=0&pid=Api&h=220&P=0',
     },
   ],
 
