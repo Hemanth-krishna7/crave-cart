@@ -1909,7 +1909,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.8,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0h3yDjSWfyQkCpQynAofHay14kbHXoO5hDbtQX4ba0A&s=10',
     },
     {
       id: 'm-13-2',
@@ -1924,7 +1924,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.6,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRfF8A2sAywswpq_FwAsO2PHBbq0grPprP5JzYlJ6tXg&s=10',
     },
     {
       id: 'm-13-3',
@@ -1939,7 +1939,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCnUEvPqM5wQDl-Ny063i7ihfU3GBIkC8WPdl1kTDkA&s=10',
     },
     {
       id: 'm-13-4',
@@ -1954,7 +1954,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdcTdpk0jM8tLy6R0_egX9Be7uf-MwUunxgYR3Xy4SUQ&s=10',
     },
     {
       id: 'm-13-5',
@@ -1969,7 +1969,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-IfHE5N8pvHIvk4Z7lDmKyqKcsnHcFen3oE-6naKtQ&s=10',
     },
     {
       id: 'm-13-6',
@@ -1984,7 +1984,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.4,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3NbNB_9ivjBamKb0PTsT6GLGfuRKvDR-HQ0oF88pTA&s=10',
     },
     {
       id: 'm-13-7',
@@ -1999,7 +1999,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.5,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8tNy9vOFFL4OkB99NgaWtlBCS1GwC6P5q9rNiQO3a_g&s=10',
     },
     {
       id: 'm-13-8',
@@ -2014,7 +2014,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.4,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe0SCLwxK_po_m7TiV7u4mjwexZ1P5hjWWL50aIBltHA&s=10',
     },
     {
       id: 'm-13-9',
@@ -2029,7 +2029,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfyYCsrWEQveBNxA_MCIqsed1aLA0RCh6HvTG2amIPog&s=10',
     },
     {
       id: 'm-13-10',
@@ -2044,7 +2044,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.5,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZksr3mqFXv8C0Fad_vy9KIyIgxsbtuqDGwEi9WvaYcw&s=10',
     },
   ],
 
