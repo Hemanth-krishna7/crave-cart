@@ -808,7 +808,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.9,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.Djfe0Z-NOZaLqOtBKL-0MwHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-2',
@@ -823,7 +823,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.fhTIVFRS-UsnoiOzG6VaDQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-3',
@@ -838,7 +838,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.D8sC6Rl4qMdj1wz021PfiAHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-4',
@@ -853,13 +853,13 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.6l1Z1pFC3DZD_ZWSZQLQRQHaEJ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-5',
-      name: 'Chocolate Chip Cookie Pack (3 Pcs)',
+      name: 'Chocolate Chip Cookie Pack (1 Pcs)',
       description: 'Giant baked cookies filled with gooey dark chocolate chunks.',
-      price: 119,
+      price: 39,
       isVeg: true,
       isPopular: false,
       bestseller: false,
@@ -868,7 +868,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1499636136210-6f4ee912704e?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.MQplgu-hXEWzhIf7lxg5sQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-6',
@@ -883,7 +883,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.5,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.UawKGExSSLR-4AYR8BuY7AHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-7',
@@ -898,7 +898,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.1w3zddxxFn_Egj-rtkhzMQHaJQ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-8',
@@ -913,7 +913,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://wellseasoned.ca/cdn/shop/products/ws-croissant_1200x_80d841f3-44fb-4675-966e-ad19e41ce5ef_2000x.jpg?v=1632253549',
     },
     {
       id: 'm-6-9',
@@ -928,7 +928,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.n1s8ufn2rOF5mUMoWYynkgHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-6-10',
@@ -943,7 +943,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.GRJKwO3GvAn2hkzE8eiUlwHaJQ?r=0&pid=Api&h=220&P=0',
     },
   ],
 
