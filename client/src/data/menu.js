@@ -1420,7 +1420,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.9,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.J5wS9qO-XFi85SR7TBkoFwHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-2',
@@ -1435,7 +1435,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.7,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.UA4169DLerpJ5A-lHHQRAAHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-3',
@@ -1450,7 +1450,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.9,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.HVlZTnvbCCRKiWVOHHlXlgHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-4',
@@ -1465,7 +1465,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.6,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.9fR74UuDrswOtTZcUtFK6wHaEj?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-5',
@@ -1480,7 +1480,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.AywhXeJVSplUU6xD6dPxsgHaEQ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-6',
@@ -1495,7 +1495,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.6,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.EfuDxkdgPomccNyBPaPgbAHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-10-7',
@@ -1510,7 +1510,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.7,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA7J-Ra5i8kPaijCeTg5s_z0Bu_UptLHKBYvj7m-eDmw&s=10',
     },
     {
       id: 'm-10-8',
@@ -1525,7 +1525,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUjTLU50ugPe6o3Nl3KeO2Xygr_gokye_FVipkFoef7g&s=10',
     },
     {
       id: 'm-10-9',
@@ -1540,7 +1540,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxfx5hgMHp2gHB2nwO7tHmfpLhmKmkf44lklzx0kEgw&s=10',
     },
     {
       id: 'm-10-10',
@@ -1555,7 +1555,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzz9z3qiQfeqIjTEYiWeECCN-_akiGYF998ltkMLA_yQ&s=10',
     },
     {
       id: 'm-10-11',
@@ -1570,7 +1570,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.6,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYzaPKPzsB_teqzUcxl2D6XZfVV1pZcwcDev6L92CNA&s=10',
     },
   ],
 
