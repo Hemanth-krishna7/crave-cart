@@ -13,7 +13,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.8,
       category: 'Pizza',
-      image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.r6QNsFDrNL6nrOMhstm88gHaEO?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-2',
@@ -28,7 +28,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Pizza',
-      image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=300&auto=format&fit=crop',
+      image: 'https://product-assets.faasos.io/production/product/image_1658347132351_Double_Cheese_Margherita_Cheese_Burst_Pizza.jpg',
     },
     {
       id: 'm-1-3',
@@ -43,7 +43,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.6,
       category: 'Pizza',
-      image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=400&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.Bfgg2vibukCAG_2y4z2AuwHaFY?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-4',
@@ -58,7 +58,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'Pizza',
-      image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.gYMce3tsnJvr1yUkX-q13wHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-5',
@@ -73,7 +73,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.A3LKQVlHHSaakPHwE0d0dQHaLH?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-6',
@@ -88,7 +88,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.3,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.1-4ms1F_AowCi_KiIFg8SgHaLH?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-7',
@@ -103,7 +103,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.9,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.biKIPWswazr83pwrXICp7wHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-8',
@@ -133,7 +133,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.3,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.sV6ehBaWQX_dakgbofZh4AHaEK?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-10',
@@ -148,7 +148,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.GjKErblWkNM0Xdsqox0_nQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-1-11',
@@ -163,7 +163,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.3,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.4XwEpC_SpIHZcQAKUKw2FAHaGH?r=0&pid=Api&h=220&P=0',
     },
   ],
 
@@ -226,7 +226,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=300&auto=format&fit=crop',
+      image: 'https://www.recipesbylayla.com/wp-content/uploads/2025/06/lhva2_62802_These_Loaded_Cheese_Fries_are_the_ultimate_indulgen_d0e68df7-57a1-45c6-8afe-4cd676739914.png',
     },
     {
       id: 'm-2-5',
@@ -256,7 +256,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.2,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1639024471283-2bc7b3c6a267?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.pSflkqVAzbBgHEVnrCeF4gHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-2-7',
@@ -271,7 +271,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.5,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.RsuG7ilcl2TA66F0ZCfpfwHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-2-8',
@@ -286,7 +286,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Wraps',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.pgt8g4rQMizb90-FPygoFQHaEp?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-2-9',
@@ -301,7 +301,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.Fdb4yKcpDOplHSYasVQLewHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-2-10',
@@ -331,7 +331,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Burgers',
-      image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.FTmjjwTRXZNLk2p1tH7fPAHaHa?r=0&pid=Api&h=220&P=0',
     },
   ],
 
@@ -349,7 +349,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.9,
       category: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.dbcUjLLiVY2mVwE4nVz5SAHaE6?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-2',
@@ -364,7 +364,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.n5QmqD5JO554U_G7qUTYnQHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-3',
@@ -379,7 +379,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.lheY5C8yUcpL7qIJFtck6AHaEK?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-4',
@@ -394,7 +394,7 @@ export const MENU_ITEMS = {
       prepTime: '25 mins',
       rating: 4.8,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.uegkD8DF6ItgD9PqMK2tpwHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-5',
@@ -409,7 +409,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.4,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.UWkjr7xKE2c7u8nd69HFTgHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-6',
@@ -424,7 +424,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.6,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.Q0p3N_-gvb-LfytPyU2w8gHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-7',
@@ -439,7 +439,7 @@ export const MENU_ITEMS = {
       prepTime: '18 mins',
       rating: 4.5,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.4fPd1jQhZ7xyaBZB6p5dSQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-8',
@@ -454,7 +454,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.MzrJB4VNw2s1zg3j8RJh4wHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-9',
@@ -469,7 +469,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.3m8CKwh95DpFN8_9p8nbZQHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-3-10',
@@ -484,7 +484,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.7,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.cjWkcMA9-_JB6tgD34uY4wHaHa?r=0&pid=Api&h=220&P=0',
     },
   ],
 
@@ -502,7 +502,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.9,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.wHcFhYAbGPqfynZrVYpiGQHaEo?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-2',
@@ -517,7 +517,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=300&auto=format&fit=crop',
+      image: 'https://img.freepik.com/premium-photo/classic-paneer-butter-masala_1264082-137.jpg?w=2000',
     },
     {
       id: 'm-4-3',
@@ -532,7 +532,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.8,
       category: 'Breads',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.MEvBa43_VsKvHvnXtPcfNwHaLH?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-4',
@@ -547,7 +547,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.8,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=300&auto=format&fit=crop',
+      image: 'https://www.spiceandlife.com/wp-content/uploads/2023/03/Dal-Makhani-Recipe.jpg',
     },
     {
       id: 'm-4-5',
@@ -562,7 +562,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.FGdSUAOrojbxr8gLQfCqMAHaE7?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-6',
@@ -577,7 +577,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.AdNQo6hdZ1ymJqk3s-91iQHaJQ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-7',
@@ -592,7 +592,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'Rice',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.EP6ksZdp_6BkfAcoDFsIhgHaEJ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-8',
@@ -607,7 +607,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Breads',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.6tu7Mz_K1e1S0kN3brUm8gHaE8?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-9',
@@ -622,7 +622,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.0TmBLPXRg4iDkzzclnaZCAHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-4-10',
@@ -637,7 +637,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.lnPSIXtTPrbVTusfL1O8ggHaHa?r=0&pid=Api&h=220&P=0',
     },
   ],
 
