@@ -1588,7 +1588,7 @@ export const MENU_ITEMS = {
       prepTime: '25 mins',
       rating: 4.9,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh5UWFi6j_oFGjXj1IId1K0K8UPCA4UJHtqRsqvD5Wtg&s=10',
     },
     {
       id: 'm-11-2',
@@ -1603,7 +1603,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmcg-z8hQNnGeEMd71rdr0Sxn66sTyfkICmrnkjwVuw&s=10',
     },
     {
       id: 'm-11-3',
@@ -1618,7 +1618,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyxqsWlDlyQjPCgLO182z132dADEXrDIZbGwcP2i8Zqw&s=10',
     },
     {
       id: 'm-11-4',
@@ -1633,7 +1633,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwdjA7hIDV_yaBi7W3KVM2ndBoHsrhm9ZmMn0SFtVY7Q&s=10',
     },
     {
       id: 'm-11-5',
@@ -1648,7 +1648,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxB1m-ElPKTYAA28m-THHcKmuKGCk4tp4u1aCJp4brfA&s=10',
     },
     {
       id: 'm-11-6',
@@ -1663,7 +1663,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.5,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJwHkdxU_oajTTll5bizuElKz2EYl9eK-64vE3wtkDg&s=10',
     },
     {
       id: 'm-11-7',
@@ -1678,7 +1678,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRrVml44K1hzYIuHioYweoh1jhKzWcSMbvOlR8MccTwQ&s=10',
     },
     {
       id: 'm-11-8',
@@ -1693,7 +1693,7 @@ export const MENU_ITEMS = {
       prepTime: '2 mins',
       rating: 4.5,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7UdPO9GKGahYvRj8UHApNh298r9ccH7jepr-1oNMQNA&s',
     },
     {
       id: 'm-11-9',
@@ -1708,7 +1708,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Rice',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIMNiPxZoroB9mu7_FwrC4O8aHEx-Aj9gv3q140JCWQ&s=10',
     },
     {
       id: 'm-11-10',
@@ -1723,7 +1723,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.4,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMetptkZApElHP-LZYXLSb49vtxdZc1GYzExn9-gSwRg&s=10',
     },
     {
       id: 'm-11-11',
@@ -1738,7 +1738,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.5,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZFVFj7ZwgQQ8I-I9THAW-Rc5lt9daiEEDCOGhMy5wsQ&s',
     },
   ],
 
