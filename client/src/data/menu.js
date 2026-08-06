@@ -1756,7 +1756,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.8,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-KTdVhs0DepXfy_74AmTFIVeFm_Ds2VdecyT5PISbQ&s=10',
     },
     {
       id: 'm-12-2',
@@ -1771,7 +1771,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThCDUcRe5QOEiuhNr-XgPSczdGFYwwnRiywbw-ChJXWQ&s=10',
     },
     {
       id: 'm-12-3',
@@ -1786,7 +1786,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjpIMZZ9z9fLCWmgCM6r93GU-qpmhsVXR2IPqlN7GHfQ&s=10',
     },
     {
       id: 'm-12-4',
@@ -1801,7 +1801,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRygOTH9urEVXXag49N3ixR7I-9-dJ6CW1-_gOP4lo3jg&s',
     },
     {
       id: 'm-12-5',
@@ -1816,7 +1816,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.6,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSor7V86FabD0iN5CsKItQ1177zjPaXCAwx_hapYEwUfQ&s=10',
     },
     {
       id: 'm-12-6',
@@ -1831,7 +1831,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.4,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhH17rRKZw9Sta_AdoUQCf7L7Ed21wBL1tCeEsL-Mh7Q&s=10',
     },
     {
       id: 'm-12-7',
@@ -1846,7 +1846,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfSk0KF2GLZ8Q0II0znfohKKUzfhIDIWyVTEiIbqyjKQ&s',
     },
     {
       id: 'm-12-8',
@@ -1861,7 +1861,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaUDJARWTXH-Kz3xI1Dq48aqyXHvOY6gAq56hCUPdKWQ&s=10',
     },
     {
       id: 'm-12-9',
@@ -1876,7 +1876,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5UyqA3Rr06NhReElHjfN8_6JkrvoWqWJsN5XZTWQMw&s',
     },
     {
       id: 'm-12-10',
@@ -1891,7 +1891,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKiifr-ZBJ_VYPAIciyP4fuxYv52t0JQZu94lWqnH6zg&s=10',
     },
   ],
 
