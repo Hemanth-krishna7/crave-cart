@@ -1114,7 +1114,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.cJPODdqksKiLaGBh11NgPgHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-2',
@@ -1129,7 +1129,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.1ov32502vqptsa9UVCjZmwHaE3?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-3',
@@ -1144,7 +1144,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.5OI5phiM-cq5cnUVWY3M_wHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-4',
@@ -1159,7 +1159,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.C8cOjg81dGKsF5koagZtKgHaFj?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-5',
@@ -1174,7 +1174,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.gRD4wKDRPN-xvht8YO6GJQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-6',
@@ -1189,7 +1189,7 @@ export const MENU_ITEMS = {
       prepTime: '18 mins',
       rating: 4.6,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.__0RQ6KPoL8ZkFw9CYGfggHaJQ?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-7',
@@ -1204,7 +1204,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.3,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.lv67y1k2JzQ84MEL-nufmQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-8',
@@ -1219,7 +1219,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.2,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.Lhp6nNT_0vkwDMlsbVj3VQHaHa?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-9',
@@ -1234,7 +1234,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.PzVunyjk4fUzHYllexsF8QHaNN?r=0&pid=Api&h=220&P=0',
     },
     {
       id: 'm-8-10',
@@ -1249,7 +1249,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=300&auto=format&fit=crop',
+      image: 'https://tse2.mm.bing.net/th/id/OIP.ap9yax7MjhrVb99Ch4E5mwHaE8?r=0&pid=Api&h=220&P=0',
     },
   ],
 
