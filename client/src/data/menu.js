@@ -2368,7 +2368,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.8,
       category: 'Burgers',
-      image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-JCZ10JvOy77LunP3Ri2x7Oi5R9sDIzJjtkecCavRg&s',
     },
     {
       id: 'm-16-2',
@@ -2383,7 +2383,7 @@ export const MENU_ITEMS = {
       prepTime: '25 mins',
       rating: 4.9,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLKCyCXQ-RMqQetspF7pEszV0vWpre2fGFbnrv0x7HMg&s=10',
     },
     {
       id: 'm-16-3',
@@ -2398,7 +2398,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Burgers',
-      image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfCKPco82UXjIeCcjkKsWodY4X1-1gmomua-vpM9bF4g&s=10',
     },
     {
       id: 'm-16-4',
@@ -2413,7 +2413,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8eBRw3SDkDEO0GZZIMPMHG_AG9AZ0IKftBt3dURDhQ&s=10',
     },
     {
       id: 'm-16-5',
@@ -2428,7 +2428,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolZTB-oiLk8MBfoFeMlg08bJ2Iymk2d2o0I_8WbXNTA&s=10',
     },
     {
       id: 'm-16-6',
@@ -2443,7 +2443,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.5,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8W4sqFqwYNsMlgOukBwqK5yWKWp743pvGcK61fXYAfw&s=10',
     },
     {
       id: 'm-16-7',
@@ -2458,7 +2458,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Main Course',
-      image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ64tycpBfSVk9arrwx1bUatyxCj-XqBJVLVzrRph8DXg&s=10',
     },
     {
       id: 'm-16-8',
@@ -2473,7 +2473,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJlEqeXr-hHPG6xeGMt4h7pbUw2AWXAsR0SLim-l_Og&s=10',
     },
     {
       id: 'm-16-9',
@@ -2488,7 +2488,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.4,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjBT2zL0yRQtSFn4KGeZHLpeVb62laFW7jaqexaww9g&s=10',
     },
     {
       id: 'm-16-10',
@@ -2503,7 +2503,7 @@ export const MENU_ITEMS = {
       prepTime: '2 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoIBxI9QO1aIEpNOGnNTGHGbaLUi05urp7rDgR45Ffzg&s',
     },
   ],
 
