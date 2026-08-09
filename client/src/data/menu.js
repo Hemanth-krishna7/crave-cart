@@ -2674,7 +2674,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_HOHHL0OyHM2f6nk_lXZFPvkCdcSBuSW1YVleT_XeEA&s=10',
     },
     {
       id: 'm-18-2',
@@ -2689,7 +2689,7 @@ export const MENU_ITEMS = {
       prepTime: '25 mins',
       rating: 4.8,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZe3qXfW9HsBhts1NH9mTLta7pHrkedOzhRgjbCBGc_A&s=10',
     },
     {
       id: 'm-18-3',
@@ -2704,7 +2704,7 @@ export const MENU_ITEMS = {
       prepTime: '18 mins',
       rating: 4.6,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOlsOwgd_Fu71i9886Krw0QXpknBXnrVOxpzv1A3s8ow&s=10',
     },
     {
       id: 'm-18-4',
@@ -2719,7 +2719,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrqySH5wOuSgPZqsX75Adu1n7LX9YHMbSTwSV41ZZfpA&s=10',
     },
     {
       id: 'm-18-5',
@@ -2734,7 +2734,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRI5Il3syz5Ii_6Rz7w_hwLS69-9OMKDtKEQF2uQiMg&s=10',
     },
     {
       id: 'm-18-6',
@@ -2749,7 +2749,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQPF27U23et4Y8ciimeadUscCZv4naZoDuKgNFCcb7jQ&s=10',
     },
     {
       id: 'm-18-7',
@@ -2764,7 +2764,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCP-tRPm96UYZDrzGNJRC1GVlNEElNXR4Kv9jLe6jt6A&s=10',
     },
     {
       id: 'm-18-8',
@@ -2779,7 +2779,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpTX4kLJqYYM5aAhLicH56xIFGgFKXvDaCn8uhtwYAbg&s=10',
     },
     {
       id: 'm-18-9',
@@ -2794,7 +2794,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.4,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy8NZ5mF_74KmoztqemtbwWODE9QzH50MIe8Nd9Nbyuw&s=10',
     },
     {
       id: 'm-18-10',
@@ -2809,7 +2809,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.4,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7R7Tumkqzu2piLSHMXMgvLCrA8rzMYKy77o_mqzMjsw&s=10',
     },
     {
       id: 'm-18-11',
@@ -2824,7 +2824,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.6,
       category: 'North Indian',
-      image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3YF5mBlYD7RcBUUBcfDInjjIXxuZjrvFyIdGjRUfh7A&s=10',
     },
   ],
 
