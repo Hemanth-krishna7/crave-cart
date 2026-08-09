@@ -2842,7 +2842,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.8,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUhw-HHozX7XejUwMReRSzFp4J-bQQvPtc37sqcZy8Hg&s=10',
     },
     {
       id: 'm-19-2',
@@ -2857,7 +2857,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.6,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2w2xe80eKotDn4zoDbJptDAeOmerfb985qrvuvRksXw&s=10',
     },
     {
       id: 'm-19-3',
@@ -2872,7 +2872,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Nmb-nkqyN31vbxabJdJB6zvqGWAY2m-JKIrAf16QEA&s=10',
     },
     {
       id: 'm-19-4',
@@ -2887,7 +2887,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.9,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsFmE4Bwab73MokL5Z-75lGujx0XpuKA9hPTocQpYtg&s=10',
     },
     {
       id: 'm-19-5',
@@ -2902,7 +2902,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7XgPFmZvU5virc75yl5yt-1qXmo4X6wOhf2dYyfhNVA&s=10',
     },
     {
       id: 'm-19-6',
@@ -2917,7 +2917,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnYo3YB7KVJRu-lIX7XHc7JKoSqeeEZAwJIpSBpmOYYQ&s',
     },
     {
       id: 'm-19-7',
@@ -2932,7 +2932,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.5,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCGv_3Jy0aZ7bnccGU4KdvHGvAKbznk0g8p4wXEGgJLg&s=10',
     },
     {
       id: 'm-19-8',
@@ -2947,7 +2947,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.7,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYzaPKPzsB_teqzUcxl2D6XZfVV1pZcwcDev6L92CNA&s=10',
     },
     {
       id: 'm-19-9',
@@ -2962,7 +2962,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVlrQzJ1k3sKhWrYrGHfunMHHLD56s55OeJA42BZo1LQ&s=10',
     },
     {
       id: 'm-19-10',
@@ -2977,7 +2977,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'South Indian',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXet88wn3OfFJI8GFBjJ_DuAjZrtY9IFWN7-om6mGa5A&s=10',
     },
   ],
 
