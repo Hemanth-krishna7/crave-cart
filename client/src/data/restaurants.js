@@ -393,7 +393,7 @@ export const RESTAURANTS = [
   {
     id: 'res-18',
     name: 'Punjab Grill House',
-    image: 'https://images.unsplash.com/photo-1585938338392-50a5d22b143b?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.openai.com/static-rsc-4/pJF4F2ypcGZ-K1MWvou7gnGXsmov9f2oviOSHoIesGQs8lWKCUD7yrt4j4xLxkjJ77fQegyBpKmwvwmpsh7cxSVRgQd9ikpkjN-lS4hZVhr7A5IJP8yTbSmaEqUSwy1SDsqeGj1Zi-f0w4kHwRTd9N1YMK8GINDe7vP3jh5FHwg?purpose=inline',
     cuisine: ['North Indian', 'Curry'],
     rating: 4.5,
     deliveryTime: '25-35 mins',
