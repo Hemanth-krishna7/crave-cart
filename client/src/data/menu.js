@@ -3775,7 +3775,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.6,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlBt-0fettiFSbspntyiBx5r_blL98tTjN8dFGvs2uew&s=10',
     },
     {
       id: 'm-25-2',
@@ -3790,7 +3790,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.5,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0kzmnC-ELXbriN8jN9-1McMpLn3hvy-vGHFchyk27Q&s=10',
     },
     {
       id: 'm-25-3',
@@ -3805,7 +3805,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKHce-zEfcAXg7Gyxat4JHmTdART5Om0EWGBAQfVjFrw&s=10',
     },
     {
       id: 'm-25-4',
@@ -3820,7 +3820,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'Street Food',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1niWbd2R_RKsWWAnQnApjwylnVRHMtb0HAsGn0H33iQ&s=10',
     },
     {
       id: 'm-25-5',
@@ -3835,7 +3835,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Breads',
-      image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJEIgB9F9klSIpBbZh4jb1Jw3x0dshLVtyUsjD5dZ2UA&s=10',
     },
     {
       id: 'm-25-6',
@@ -3850,7 +3850,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Starters',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7O8ikDeOCHY-pAuAKyTxbm-YtaGLlTjOAbPiuveboAQ&s=10',
     },
     {
       id: 'm-25-7',
@@ -3865,7 +3865,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.7,
       category: 'Biryani',
-      image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqqKsmYlo0hkLkb5Es5awoEX7W2OnLdaB_J_2S0__JzQ&s=10',
     },
     {
       id: 'm-25-8',
@@ -3880,7 +3880,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuq2ti_8qU5L8EAazgftVfAVtsuB0la6r7zAQi9upQ2w&s=10',
     },
     {
       id: 'm-25-9',
@@ -3895,7 +3895,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScA8Qsicc5Xib8GNUMe225p8-0oqCc-zZ2eePZ5TOr0A&s=10',
     },
     {
       id: 'm-25-10',
@@ -3910,7 +3910,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Sides',
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwn16qcQVv_D668Gzq1YGyWJQUfDeXGIxj0keiKgiSww&s=10',
     },
   ],
 
