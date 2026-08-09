@@ -3622,7 +3622,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzSugHkjL1_8nzsZKK8AjO52jGpcv-7rbqGaFhx74Cw&s=10',
     },
     {
       id: 'm-24-2',
@@ -3637,7 +3637,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.5,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WtwfV2amwmDSunObcgGbk_WmsWEGXJoXE2BGE7ITUg&s=10',
     },
     {
       id: 'm-24-3',
@@ -3652,7 +3652,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbdy8-460Kp4RnuP6VdM5p9PfwkVstnd1GwZZ-NEYBkA&s=10',
     },
     {
       id: 'm-24-4',
@@ -3667,7 +3667,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRiOIsQuVtgvNjLfW5OyRSsDLA8PYA6A41K-CsfiZL3g&s=10',
     },
     {
       id: 'm-24-5',
@@ -3682,7 +3682,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.6,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBkaU2L5VxOkpG--18w5OEffW9yKlNhGKCN1cgmPtIAg&s=10',
     },
     {
       id: 'm-24-6',
@@ -3697,7 +3697,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.4,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx2IXkDaCsLsVl7NRPmS7GD9hSFHXRyRSmDPqzWOuW4A&s=10',
     },
     {
       id: 'm-24-7',
@@ -3712,7 +3712,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1506313564200-e75d5e30476c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdESstQjC2QAVMvK-DYek4roUCtCSBNqy_D1JA9v4hGw&s=10',
     },
     {
       id: 'm-24-8',
@@ -3727,7 +3727,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Healthy Food',
-      image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuObI50Q5j-Utcs4C7cP_F-jBRQv3qldMwaql8P2bxg&s=10',
     },
     {
       id: 'm-24-9',
@@ -3742,7 +3742,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEY4W0hEbLaV941HHRtaes0y63fL8vmxdnOSc3nQHEEw&s=10',
     },
     {
       id: 'm-24-10',
@@ -3757,7 +3757,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3iHCGDeNr-4AyCLMiJPHkyNZCVHd5IgTFrsmsRsjQyg&s=10',
     },
   ],
 
