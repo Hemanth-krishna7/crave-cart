@@ -2062,7 +2062,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.8,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqylm-itDHXxwP-sePa50iA5sTuP-g_f3AD2naiL93IQ&s=10',
     },
     {
       id: 'm-14-2',
@@ -2077,7 +2077,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxPbgatdDWOvIa1KJUedTuEt0d3yg5SGtteuAn0_tjQ&s=10',
     },
     {
       id: 'm-14-3',
@@ -2092,7 +2092,7 @@ export const MENU_ITEMS = {
       prepTime: '25 mins',
       rating: 4.8,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0iNr8j8HvcdtW1ort9kzOw07sIk8EUzer7xa2V59OLg&s=10',
     },
     {
       id: 'm-14-4',
@@ -2107,7 +2107,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.5,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMJWB1gShUv354ke-GjOkK5PA_2vkpbi1LAeyXzP44g&s=10',
     },
     {
       id: 'm-14-5',
@@ -2122,7 +2122,7 @@ export const MENU_ITEMS = {
       prepTime: '20 mins',
       rating: 4.6,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1oyhaaroIyUgu6-hHegCXE-nOnWreNLMo5EWsjm5S2A&s=10',
     },
     {
       id: 'm-14-6',
@@ -2137,7 +2137,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.8,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIQ-l5HRDVNzcysdvwg0pbJgYgxtoxpcXD2-DlzefXyA&s=10',
     },
     {
       id: 'm-14-7',
@@ -2152,7 +2152,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.3,
       category: 'Rice',
-      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lxc44M_eUnJb4ExxC14zTYeR8L_IqbtBVrCn_h6k-w&s=10',
     },
     {
       id: 'm-14-8',
@@ -2167,7 +2167,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.8,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwe4hJGSnM8x4adadqbsNxDc1LHta9oaJ8r37YTeM74g&s=10',
     },
     {
       id: 'm-14-9',
@@ -2182,7 +2182,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Seafood',
-      image: 'https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnS9L0PQzBp_EoTrmlZm_ZfoQLzRzSlnaT8hrs4od_MA&s=10',
     },
     {
       id: 'm-14-10',
@@ -2197,7 +2197,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5ciBq-ZCPDf2AMkF5VmqJNJsa9Jkvs7tiEr9tLHEAQ&s=10',
     },
   ],
 
