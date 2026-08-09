@@ -1,99 +1,71 @@
-# CraveCart Monorepo
+# CraveCart
 
-Welcome to **CraveCart** - your ultimate companion for grocery shopping and meal planning.
+### Fresh Food. Faster Than Ever.
 
-This project is a monorepo utilizing npm workspaces to structure the frontend (React + Vite + Tailwind CSS v4) and backend (Node.js + Express) projects.
+CraveCart is a modern food delivery web application focused on restaurant discovery, menu browsing, cart management, and a smooth checkout experience.
 
-## Project Structure
+**Live Demo:** https://crave-cart-sigma.vercel.app/
 
-```text
-crave-cart/
-├── client/                 # Frontend React application
-│   ├── src/
-│   │   ├── assets/         # Images, fonts, and other static assets
-│   │   ├── components/     # Reusable UI components
-│   │   ├── constants/      # App constants, enums, config values
-│   │   ├── data/           # Mock data or static data files
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── layouts/        # Shared page layouts (e.g., RootLayout)
-│   │   ├── pages/          # Page components (Home, NotFound, etc.)
-│   │   ├── routes/         # Router configuration & route declarations
-│   │   ├── services/       # API call handlers & third-party integrations
-│   │   ├── store/          # State management (context/store)
-│   │   ├── styles/         # Global styles (Tailwind CSS imports)
-│   │   └── utils/          # Helper/utility functions
-│   ├── index.html          # Vite entry HTML
-│   ├── jsconfig.json       # Path alias auto-completion mapping
-│   ├── package.json        # Client package & scripts
-│   └── vite.config.js      # Vite + React + Tailwind v4 config
-├── server/                 # Backend Node.js Express application
-│   ├── src/
-│   │   ├── config/         # App configuration & environment config
-│   │   ├── controllers/    # Route controllers / handlers
-│   │   ├── middleware/     # Custom Express middleware (auth, logging)
-│   │   ├── routes/         # Express routers (API endpoints)
-│   │   ├── app.js          # Express app configuration
-│   │   └── index.js        # Node.js app entry point
-│   ├── .env                # Environmental variables (ignored)
-│   ├── .env.example        # Env template variables
-│   └── package.json        # Server package & scripts
-├── docs/                   # Project documentation & guides
-│   ├── PROJECT_BIBLE.md    # Master architecture guide
-│   └── walkthrough.md      # Milestone walkthroughs
-├── package.json            # Monorepo configuration
-├── eslint.config.js        # Root ESLint (flat config)
-└── .prettierrc             # Prettier configurations
-```
+## Features
+
+- Browse and search restaurants and dishes
+- Filter and sort discovery results
+- View restaurant details and categorized menus
+- Add, remove, and update cart items
+- Support multiple restaurants in a single cart
+- Manage favourites
+- Enforce minimum order requirements per restaurant
+- Checkout and order review flow
+- Responsive design for desktop, tablet, and mobile
+- Smooth navigation and scroll-to-top interactions
+
+## Tech Stack
+
+**Frontend**
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- React Router
+- Zustand
+- React Hook Form
+- Zod
+
+**Backend**
+- Node.js
+- Express.js
+
+## Screenshots
+
+### Home
+<img width="2532" height="1599" alt="Screenshot 2026-08-09 100200" src="https://github.com/user-attachments/assets/b90f0fd8-81d5-4acc-8a61-6847d1029f49" />
+
+### Restaurant Discovery
+<img width="2514" height="1599" alt="image" src="https://github.com/user-attachments/assets/dcd7403c-bc4c-4d46-8ec6-78a5ad8ae686" />
+
+### Restaurant Details
+<img width="2531" height="1599" alt="image" src="https://github.com/user-attachments/assets/bf32f5d4-f3e9-4e6e-95fd-cdda1f598e3e" />
+
+
+### Cart & Checkout
+<img width="2513" height="1467" alt="image" src="https://github.com/user-attachments/assets/5534de81-83bc-439c-874f-eefb03acb9b3" />
+
+<img width="2531" height="1599" alt="image" src="https://github.com/user-attachments/assets/3bc2eb51-8429-4331-8adc-c9a06b58e1dc" />
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v18 or higher recommended)
-- npm (v9 or higher recommended)
-
-### Installation
-
-Install all dependencies across the monorepo from the root directory:
-
 ```bash
-npm run install-all
-```
-
-### Running Development Servers
-
-Start both the React client (Vite) and the Node.js server (Nodemon) concurrently:
-
-```bash
+git clone https://github.com/Hemanth-krishna7/crave-cart.git
+cd crave-cart
+npm install
 npm run dev
 ```
+---
 
-* Frontend running at: [http://localhost:5173](http://localhost:5173)
-* Backend running at: [http://localhost:5000](http://localhost:5000)
+## Future Improvements
 
-### Workspace Specific Commands
-
-Run commands specifically on a single workspace using:
-
-* **Client only:** `npm run dev --workspace=client`
-* **Server only:** `npm run dev --workspace=server`
-
-### Build & Lint
-
-To build the React application for production:
-
-```bash
-npm run build
-```
-
-To run lint checks across the monorepo:
-
-```bash
-npm run lint
-```
-
-To automatically format the code using Prettier:
-
-```bash
-npm run format
-```
+- User authentication
+- Database integration
+- Online payment integration
+- Real-time order tracking
+- Restaurant and admin dashboards
