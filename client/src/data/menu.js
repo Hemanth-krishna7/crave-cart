@@ -2995,7 +2995,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.7,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1g0l2dnwb9BC1o7OqvyDh0RdPJiCyO63TZe6VkKGFXw&s=10',
     },
     {
       id: 'm-20-2',
@@ -3010,7 +3010,7 @@ export const MENU_ITEMS = {
       prepTime: '18 mins',
       rating: 4.8,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkYb2f5guC3u8ps7eRQY5Y_cGNYmpeWKpSKwMLMOPRpA&s=10',
     },
     {
       id: 'm-20-3',
@@ -3025,7 +3025,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.6,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaZHJfY7lmeWgXL35amlCVAj5HOOygfqMYpWSaOcesQ&s=10',
     },
     {
       id: 'm-20-4',
@@ -3040,7 +3040,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.4,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6p_9GUDYmjqhbdz8FgkAoBvufWydoa-_IClB5ueRqGA&s=10',
     },
     {
       id: 'm-20-5',
@@ -3055,7 +3055,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.3,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlbj0JOAhLEG3laV7pExU4PzNv06CXTu5mmfQO5fUTA&s=10',
     },
     {
       id: 'm-20-6',
@@ -3070,7 +3070,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.4,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifrap-ODKe4PYxEd_MERsdIXhJ-8Sx_D3oLJUsrOC8Q&s=10',
     },
     {
       id: 'm-20-7',
@@ -3085,7 +3085,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.5,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtN_AODXowdP-TPSZ1eEGq__pd5Yx2IUky-oF1o8JEw&s=10',
     },
     {
       id: 'm-20-8',
@@ -3100,7 +3100,7 @@ export const MENU_ITEMS = {
       prepTime: '15 mins',
       rating: 4.5,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNEH4IcMiI7TLllBAFGmRf65lvi_9EPZ6q0RXVX7KjHA&s=10',
     },
     {
       id: 'm-20-9',
@@ -3115,7 +3115,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47dOF7yFg9OSQmQYpiUDnWgaaS92p1UD3gDfw08KlHA&s=10',
     },
     {
       id: 'm-20-10',
@@ -3130,7 +3130,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.3,
       category: 'Chinese',
-      image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVX4OM9UjSBMTtcvNMMZQvzNB4W8gLU4c5INudYfQWFQ&s=10',
     },
   ],
 
@@ -3148,7 +3148,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.9,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQov-D7jBnG43dwSDbegsTukV80G4R2_2Y6Becp04UkiQ&s=10',
     },
     {
       id: 'm-21-2',
@@ -3163,7 +3163,7 @@ export const MENU_ITEMS = {
       prepTime: '12 mins',
       rating: 4.7,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKHNOOxFwVtm8w1XzFhLl8UZMt5XEGzfivsyx6pEQ8Og&s=10',
     },
     {
       id: 'm-21-3',
@@ -3178,7 +3178,7 @@ export const MENU_ITEMS = {
       prepTime: '3 mins',
       rating: 4.6,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwEvKSv6nrG9sxpconrJHrzecvA78divgLV6AMZmx_rw&s=10',
     },
     {
       id: 'm-21-4',
@@ -3193,7 +3193,7 @@ export const MENU_ITEMS = {
       prepTime: '6 mins',
       rating: 4.8,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq6AMCmSXBDkkI9VhKtUKDP8hheeFT1cIidn6TNDhCuw&s',
     },
     {
       id: 'm-21-5',
@@ -3208,7 +3208,7 @@ export const MENU_ITEMS = {
       prepTime: '10 mins',
       rating: 4.7,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-KTdVhs0DepXfy_74AmTFIVeFm_Ds2VdecyT5PISbQ&s=10',
     },
     {
       id: 'm-21-6',
@@ -3223,7 +3223,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.4,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuFclnLohs36ktkv8z_S7IIv8TG8bGh3TZJO1Ipa_ww&s=10',
     },
     {
       id: 'm-21-7',
@@ -3238,7 +3238,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.6,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1499636136210-6f4ee912704e?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4sdSnJMu-a1BlQszdKLzocGl5P5yMDH1Eeartr7kmoA&s=10',
     },
     {
       id: 'm-21-8',
@@ -3253,7 +3253,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.7,
       category: 'Desserts',
-      image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKffVS0b0_oXsPVlAhHxBbbFoiVoOa9iLWNzwctiuUMQ&s=10',
     },
     {
       id: 'm-21-9',
@@ -3268,7 +3268,7 @@ export const MENU_ITEMS = {
       prepTime: '8 mins',
       rating: 4.6,
       category: 'Cafe',
-      image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiZAGC-lrdrxaI1RTukOLmeL5dalnNMevlDfcX1zVtmQ&s=10',
     },
     {
       id: 'm-21-10',
@@ -3283,7 +3283,7 @@ export const MENU_ITEMS = {
       prepTime: '5 mins',
       rating: 4.5,
       category: 'Beverages',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300&auto=format&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFRf9r7-5IkJdiS3C-NcOybG-T1qdLgb6cRcGTYYiww&s=10',
     },
   ],
 
